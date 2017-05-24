@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MeetSys:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/MeetSys_war</output-path>
+    <root id="archive" name="MeetSys_war.war">
+      <element id="artifact" artifact-name="MeetSys:war exploded" />
+    </root>
+  </artifact>
+</component>
