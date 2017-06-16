@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "预约会议" 2>
     <meta charset="utf-8">
     <link href="${ctx!}/css/phonemeeting.css" rel="stylesheet" type="text/css"/>
@@ -107,9 +107,9 @@
                                     </select>
                                 </div>
                             </div>
-                            <div id="meetPwd" style="display: none;">
+                            <div id="meetPwd">
                                 <div>
-                                    <div style="float: left">主持人密码：</div>
+                                    <div style="float: left">会议密码：</div>
                                     <input type="text" class="inputBox" name="order.hostPwd" id="hostPwd" value="<#if hostPwd??>${hostPwd}<#elseif order.hostPwd??>${order.hostPwd}</#if>" style="float:left;width: 80px;text-align: center;" readonly="readonly"/>
                                     <button type="button" class="btn_sytle btn_sel_host refresh_btn" style="margin-bottom: 5px;">重新生成</button>
                                 </div>
@@ -149,7 +149,7 @@
                     <tr style="width: 630px;" class="invitTr">
                         <td colspan="2" style="width: 620px;">
                             <div class="title-obj hand" style="padding:0px;width: 500px;margin-left: 30px;margin-top: 5px;">
-                                &nbsp;<img id="objImg" src="/img/plus.gif"/>
+                                &nbsp;<img id="objImg" src="${ctx!}/img/plus.gif"/>
                                 邀请对象（可选，点击展开）
                             </div>
                         </td>
@@ -200,7 +200,7 @@
                                         <button type="button" id="addContact" class="btn_style addContact">手工增加</button>
                                         <button type="button" id="deleteAll" class="btn_style deleteAll" style="display: none;">全部删除</button>
                                     </div>
-                                    <div><input type="checkbox" class="input_radio_check" id="smsRemind" name="smsRemind">
+                                    <div><input type="checkbox" class="input_radio_check" id="smsRemind" name="smsRemind" checked="">
                                         <label for="smsRemind" class="chkbox_label" style="margin-left:-5px;">在会议开始前</label>
                                         <select id="smsRemindTime" name="smsRemindTime">
                                             <option value="5" selected="">5</option>
@@ -223,8 +223,16 @@
                                         <label for="smsNotice" class="chkbox_label">向邀请对象发送邀请短信</label>
                                     </div>
                                     <div>
+                                        <input type="checkbox" class="input_radio_check" checked="checked" id="emailNotice" name="emailNotice" value="">
+                                        <label for="emailNotice" class="chkbox_label">向邀请对象发送邮件</label>
+                                    </div>
+                                    <div>
                                         <input type="checkbox" class="input_radio_check" id="containHost" name="containHost" value="">
                                         <label for="containHost" class="chkbox_label">包含主持人</label>
+                                    </div>
+                                    <div>
+                                        <input type="checkbox" class="input_radio_check" checked="checked" id="isCallInitiative" value="">
+                                        <label for="isCallInitiative" class="chkbox_label">是否主动呼叫</label>
                                     </div>
                                 </div>
                                 <hr style="margin-left:30px; width: 538px; height:1px; border:0 none; border-top:1px dashed #A6C9E2;">
@@ -275,10 +283,10 @@
         $("div.title-obj").click(function () {
             if($("#inviteeObjId").is(":hidden")){
                 $("#inviteeObjId").show();
-                $("#objImg").attr("src","/img/minus.gif");
+                $("#objImg").attr("src","${ctx!}/img/minus.gif");
             }else{
                 $("#inviteeObjId").hide();
-                $("#objImg").attr("src","/img/plus.gif");
+                $("#objImg").attr("src","${ctx!}/img/plus.gif");
             }
         });
 

@@ -26,15 +26,12 @@ public class MeetManager {
 
     private MeetManager(){}
 
+    private static class InstanceHolder{
+        private static MeetManager instance=new MeetManager();
+    }
+
     public static MeetManager getInstance(){
-        if(instance==null){
-            synchronized (lock){
-                if(instance==null){
-                    instance=new MeetManager();
-                }
-            }
-        }
-        return instance;
+        return InstanceHolder.instance;
     }
 
     /**
@@ -50,7 +47,7 @@ public class MeetManager {
      * @return
      */
     public int getMeetNums(){
-        return PropKit.use("config.properties").getInt("meetNums",20);
+        return PropKit.use("config.properties").getInt("meetNums",200);
     }
 
 
@@ -92,9 +89,13 @@ public class MeetManager {
         return passwordSet;
     }
 
-    public synchronized boolean isUsedPassword(String password) {
+    public boolean isUsedPassword(String password) {
         Set<String> passwordSet=getUsedPassword();
         return passwordSet.contains(password);
+    }
+
+    public void addUsedPassword(String password){
+        getUsedPassword().add(password);
     }
 
     /**
@@ -120,7 +121,14 @@ public class MeetManager {
         }
         map.put(Constant.ACTION,Constant.ACTION_CREATE_CALLMEET);
         String result = HttpKit.post(getMeetServiceUrl(), JsonKit.toJson(map));
-        return getResult(result);
+        Map<String,Object> resultMap = getResult(result);
+        //如果创建失败，则在删除缓存对应中的已使用的集合中的密码
+        if(!Constant.SUCCESS.equals(resultMap.get(Constant.STATUS).toString())){
+            Set<String> usedSet = getUsedPassword();
+            usedSet.remove(map.get(Constant.CHAIRMANPWD));
+            usedSet.remove(map.get(Constant.AUDIENCEPWD));
+        }
+        return resultMap;
     }
 
     public Map<String,Object> getResult(String result){
@@ -185,9 +193,18 @@ public class MeetManager {
     }
 
     public static void main(String[] args) {
-        Map<String,Object> resultMap = getInstance().getMeetCallStatus("tf9hq7rd1w4luxwxubbxdpn6t8f8e192");
-        for(String key:resultMap.keySet()){
-            System.out.println(key+":"+resultMap.get(key));
-        }
+//        Map<String,Object> resultMap = getInstance().getMeetCallStatus("tf9hq7rd1w4luxwxubbxdpn6t8f8e192");
+//        for(String key:resultMap.keySet()){
+//            System.out.println(key+":"+resultMap.get(key));
+//        }
+        Map<String,Object> paraMap=new HashMap<>();
+        paraMap.put(Constant.CHAIRMANPWD,"123456");
+        paraMap.put(Constant.AUDIENCEPWD,"123456");
+        paraMap.put(Constant.COSTNUM,"057185783631");
+        paraMap.put(Constant.SHOWNUM,"057185783631");
+        paraMap.put(Constant.CALLER,"13277054876");
+        paraMap.put(Constant.NAME,"123");
+        Map<String,Object> resultMap = getInstance().createMeet(paraMap);
+        System.out.println(resultMap.toString());
     }
 }

@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "个人通信录" 4>
     <meta charset="utf-8">
     <link href="${ctx!}/css/export.css" rel="stylesheet" type="text/css"/>
@@ -21,8 +21,8 @@
                                 <div class="fps_right fps_right down_select_right">
                                     <div class="down_description">下载标准模板文档，并按该文档的格式输入联系人信息后，即可快速导入联系人</div>
                                     <div class="down_div">
-                                        <img class="down_ico" src="/img/20140120download.png">
-                                        <a class="down_text mouseClass" href="<#if dlist??>/publiccontacts/download<#elseif glist??>/personalcontacts/download</#if>">下载标准模板文件</a>
+                                        <img class="down_ico" src="${ctx!}/img/20140120download.png">
+                                        <a class="down_text mouseClass" href="<#if dlist??>${ctx!}/publiccontacts/download<#elseif glist??>${ctx!}/personalcontacts/download</#if>">下载标准模板文件</a>
                                     </div>
                                 </div>
                             </li>

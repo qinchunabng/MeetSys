@@ -53,7 +53,7 @@ public class PackageController extends Controller {
     public void add(){
         PackageVo packageVo=getBean(PackageVo.class,"pv");
         packageService.add(packageVo);
-        redirect(getRequest().getContextPath()+"/admin/package");
+        redirect("/admin/package");
     }
 
     @Clear({SAdminInterceptor.class})

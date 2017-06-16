@@ -1,5 +1,6 @@
 package com.dbkj.meet.controller;
 
+import com.dbkj.meet.controller.base.BaseController;
 import com.dbkj.meet.dic.Constant;
 import com.dbkj.meet.dto.ChangePwd;
 import com.dbkj.meet.dto.Result;
@@ -23,7 +24,7 @@ import java.util.Map;
  * Created by MrQin on 2016/11/8.
  */
 @Before({UserInterceptor.class})
-public class UserController extends Controller{
+public class UserController extends BaseController {
 
     private IUserService userService=new UserService();
 
@@ -72,8 +73,7 @@ public class UserController extends Controller{
         User user=getSessionAttr(Constant.USER_KEY);
         userService.addUserData(userData,user.getCid(),getRequest());
         String queryString=getPara("queryString");
-        String contextPath=getRequest().getContextPath();
-        redirect(contextPath.concat(path).concat(queryString));
+        redirect(path.concat(queryString));
     }
 
     @Before({POST.class, UserDataValidator.class})
@@ -98,17 +98,43 @@ public class UserController extends Controller{
 
     @Before({POST.class,UserDataValidator.class})
     public void update(){
-        UserData userData=getBean(UserData.class,"user");
-        userService.updateUserData(userData,getRequest());
+        UserData userData=getAttr("user");
+        userService.updateUserData(userData);
         String queryString=getPara("queryString");
-        redirect(getRequest().getContextPath().concat("/user").concat(queryString));
+        redirect("/user".concat(queryString));
+    }
+
+    /**
+     * 个人资料
+     */
+    @Clear({UserInterceptor.class})
+    public void showSelf(){
+        User user=getSessionAttr(Constant.USER_KEY);
+        setAttr("role",user.getAid());
+        userService.setPageData(getRequest());
+        UserData userData=userService.getUserData(user.getId());
+        setAttr("user",userData);
+        //获取部门信息
+        List<Department> departmentList = userService.getDepartments(user.getCid());
+        setAttr("dlist",departmentList);
+        render("detail.html");
+    }
+
+    /**
+     * 修改个人资料
+     */
+    @Clear({UserInterceptor.class})
+    public void updateSelf(){
+        UserData userData=getBean(UserData.class,"user");
+        Result result = userService.updateSelf(userData,getRequest());
+        renderJson(result);
     }
 
     public void delete(){
         String idStr=getPara();
         String queryString=getRequest().getQueryString();
         userService.deleteUsers(idStr);
-        redirect(getRequest().getContextPath().concat("/user").concat(StrKit.isBlank(queryString)?"":"?"+queryString));
+        redirect("/user".concat(StrKit.isBlank(queryString)?"":"?"+queryString));
     }
 
     public void showChangePwd(){

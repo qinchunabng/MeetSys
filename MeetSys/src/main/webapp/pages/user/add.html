@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "用户管理" 5>
     <meta charset="UTF-8">
     <link href="${ctx!}/css/addcontact.css" rel="stylesheet" type="text/css"/>
@@ -136,11 +136,13 @@
                     var encrypt=new JSEncrypt();
                     encrypt.setPublicKey($("#publicKey").val());
                     var password=$("input[name='user.password']").val().trim();
-                    $("input[name='user.password']").val(common.generateMixed(password.length));
                     $("#encryptPwd").val(encrypt.encrypt(password));
+                    $("input[name='user.password']").val(common.generateMixed(password.length));
+
                     var confirmPwd=$("input[name='user.confirmPwd']").val().trim();
-                    $("input[name='user.confirmPwd']").val(common.generateMixed(confirmPwd.length));
                     $("#encryptConfirmPwd").val(encrypt.encrypt(confirmPwd));
+                    $("input[name='user.confirmPwd']").val(common.generateMixed(confirmPwd.length));
+
                     //如果用户id存在，则为修改用户信息
                     if($("#uid").val()){
                         userAdd.updateUser();

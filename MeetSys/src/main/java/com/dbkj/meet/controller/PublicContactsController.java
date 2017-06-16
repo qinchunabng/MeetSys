@@ -1,5 +1,6 @@
 package com.dbkj.meet.controller;
 
+import com.dbkj.meet.controller.base.BaseController;
 import com.dbkj.meet.dic.Constant;
 import com.dbkj.meet.dto.BaseNode;
 import com.dbkj.meet.dto.PubContact;
@@ -8,9 +9,9 @@ import com.dbkj.meet.model.Department;
 import com.dbkj.meet.model.User;
 import com.dbkj.meet.services.PublicContactService;
 import com.dbkj.meet.services.inter.IPublicContactService;
-import com.dbkj.meet.services.proxy.ClearCacheProxy;
 import com.dbkj.meet.validator.PubContactValidator;
 import com.jfinal.aop.Before;
+import com.jfinal.aop.Enhancer;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.interceptor.POST;
 import com.jfinal.kit.StrKit;
@@ -23,12 +24,12 @@ import java.util.Map;
 /**
  * Created by MrQin on 2016/11/24.
  */
-public class PublicContactsController extends Controller {
+public class PublicContactsController extends BaseController {
 
     /**
      * 使用代理类来清除相关缓存
      */
-    private IPublicContactService publicContactService= (IPublicContactService) new ClearCacheProxy().bind(new PublicContactService());
+    private IPublicContactService publicContactService= Enhancer.enhance(PublicContactService.class);
 
     private User user;
 
@@ -83,8 +84,7 @@ public class PublicContactsController extends Controller {
         user=getUser();
         publicContactService.addContact(pubContact,user.getCid());
         String queryString=getPara("queryString");
-        String contextPath=getRequest().getContextPath();
-        redirect(contextPath.concat(path).concat(queryString));
+        redirect(path.concat(queryString));
     }
 
     @Before({POST.class, PubContactValidator.class})
@@ -109,8 +109,7 @@ public class PublicContactsController extends Controller {
         PubContact pubContact=getBean(PubContact.class,"contact");
         publicContactService.updateContactData(pubContact);
         String queryString=getPara("queryString");
-        String contextPath=getRequest().getContextPath();
-        redirect(contextPath.concat("/publiccontacts").concat(queryString));
+        redirect("/publiccontacts".concat(queryString));
     }
 
     public void delete(){
@@ -118,7 +117,7 @@ public class PublicContactsController extends Controller {
         String queryString=getRequest().getQueryString();
         user=getUser();
         publicContactService.deleteContacts(idStr,user.getCid());
-        redirect(getRequest().getContextPath().concat("/publiccontacts").concat(StrKit.isBlank(queryString)?"":"?"+queryString));
+        redirect("/publiccontacts".concat(StrKit.isBlank(queryString)?"":"?"+queryString));
     }
 
     public void export(){//导出联系人

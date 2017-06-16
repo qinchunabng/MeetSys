@@ -1,10 +1,13 @@
 package com.dbkj.meet.services;
 
 import com.dbkj.meet.dic.CallTypeEnum;
+import com.dbkj.meet.dic.Constant;
 import com.dbkj.meet.dic.MessageConstant;
+import com.dbkj.meet.dic.OrderCallType;
 import com.dbkj.meet.model.*;
+import com.dbkj.meet.services.inter.IOrderTimeService;
+import com.dbkj.meet.services.inter.ISMTPService;
 import com.dbkj.meet.services.inter.MessageService;
-import com.dbkj.meet.utils.DateUtil;
 import com.dbkj.meet.utils.MessageUtil;
 import com.dbkj.meet.utils.ValidateUtil;
 import com.jfinal.plugin.activerecord.Db;
@@ -25,8 +28,11 @@ public class MessageServiceImpl implements MessageService {
 
     private final Logger log= LoggerFactory.getLogger(this.getClass());
 
+    private IOrderTimeService orderTimeService = new OrderTimeServiceImpl();
+    private ISMTPService smtpService=null;
+
     @Override
-    public void sendMsg(HttpServletRequest request) {
+    public void sendNotice(HttpServletRequest request) {
         Long rid=null;
         try {
             rid = Long.parseLong(request.getParameter("rid"));
@@ -34,11 +40,19 @@ public class MessageServiceImpl implements MessageService {
             log.error(e.getMessage(),e);
         }
         String phone=request.getParameter("phone");
-        sendMsg(rid,phone);
+        String name=request.getParameter("name");
+        sendMsg(rid,phone,name);
+        //发送邮件通知
+        if(smtpService==null){
+            smtpService=new SMTPServiceImpl();
+        }
+        Long uid = ((User)request.getSession().getAttribute(Constant.USER_KEY)).getId();
+        List<String> toList=Employee.dao.getEmailByUsername(Arrays.asList(phone));
+        smtpService.sendMail(uid,toList.toArray(new String[toList.size()]),rid);
     }
 
     @Override
-    public void sendMsg(Long rid, String phone) {
+    public void sendMsg(Long rid, String phone,String name) {
         if(rid!=null&&ValidateUtil.validateMobilePhone(phone)){
             Record record = Record.dao.findById(rid);
             //短息内容
@@ -64,20 +78,23 @@ public class MessageServiceImpl implements MessageService {
             //短信发送成功，扣费
             if(resultMap.get(MessageConstant.STATUS).equals(MessageConstant.SUCCESS)){
 //                charging(record,company.getId());
-                charging(rid,company.getId(),smsContent.toString());
+                if(log.isInfoEnabled()){
+                    log.info("send meesage to:{}",phone);
+                }
+                charging(rid,company.getId(),smsContent.toString(),name,phone);
             }else{
                 //发送失败，重发
                 try {
-                    Thread.sleep(10);
+                    Thread.sleep(1000);
                 } catch (InterruptedException e) {
                     log.error(e.getMessage(),e);
                 }
-                sendMsg(rid,phone);
+                sendMsg(rid,phone,name);
             }
         }
     }
 
-    private void charging(final Long rid, final Long cid, final String msg){
+    private void charging(final Long rid, final Long cid, final String msg, final String name, final String phone){
         Db.tx(new IAtom() {
             @Override
             public boolean run() throws SQLException {
@@ -87,6 +104,9 @@ public class MessageServiceImpl implements MessageService {
                 sms.setRid(rid!=null?Integer.parseInt(rid.toString()):null);
                 sms.setMsg(msg);
                 sms.setFee(fee.getRate());
+                sms.setRate(fee.getRate()+"元/条");
+                sms.setName(name);
+                sms.setPhone(phone);
                 sms.setGmtCreate(new Date());
                 if(sms.save()){
                     //扣除账户中短信费用
@@ -107,37 +127,59 @@ public class MessageServiceImpl implements MessageService {
         });
     }
 
-
     @Override
-    public void sendSms(Long orid, String phone) {
-        OrderMeet orderMeet=OrderMeet.dao.findById(orid);
-        sendSms(orderMeet,phone);
-    }
-
-    @Override
-    public void sendSms(OrderMeet orderMeet, String phone) {
+    public void sendOrderSms(Long rid, OrderMeet orderMeet, String phone, String name) {
         if(orderMeet!=null&&ValidateUtil.validateMobilePhone(phone)){
             //短信内容
-            StringBuilder smsContent=new StringBuilder(250);
-            smsContent.append(orderMeet.getHostName());
-            smsContent.append("邀请您于");
-            smsContent.append(getOrderMeetStartTime(orderMeet));
-            smsContent.append("参加");
-            smsContent.append(orderMeet.getSubject());
-            smsContent.append("，");
             Company company=Company.dao.findById(User.dao.findById(orderMeet.getBelong()).getCid());
-            smsContent.append("请注意接听");
-            smsContent.append(AccessNum.dao.findById(company.getCallNum()).getNum());
-            smsContent.append("的来电");
+            OrderCallType type=orderMeet.getIsCallInitiative()==Integer.parseInt(Constant.YES)?OrderCallType.CALL_INITIATIVE:OrderCallType.CALL_ONLY_HOST;
+            String smsContent=getOrderSmsContent(orderMeet,company,type);
 
             Map<String,Object> paraMap=new HashMap<String,Object>();
             paraMap.put(MessageConstant.MOBILE,phone);
-            paraMap.put(MessageConstant.SMS_CONTENT,smsContent.toString());
+            paraMap.put(MessageConstant.SMS_CONTENT,smsContent);
 
             Map<String,Object> resultMap= MessageUtil.sendMessage(paraMap);
             //短信发送成功，扣费
             if(resultMap.get(MessageConstant.STATUS).equals(MessageConstant.SUCCESS)){
-                orderMeetCharging(company.getId(),smsContent.toString());
+                if(log.isInfoEnabled()){
+                    log.info("send meesage to phone:{}",phone);
+                }
+                charging(rid,company.getId(),smsContent,name,phone);
+            }else{
+                //发送失败，重发
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    log.error(e.getMessage(),e);
+                }
+                sendOrderSms(orderMeet,phone,name);
+            }
+        }
+    }
+
+    @Override
+    public void sendOrderSms(Long orid, String phone, String name) {
+        OrderMeet orderMeet=OrderMeet.dao.findById(orid);
+        sendOrderSms(orderMeet,phone,name);
+    }
+
+    @Override
+    public void sendOrderSms(OrderMeet orderMeet, String phone, String name) {
+        if(orderMeet!=null&&ValidateUtil.validateMobilePhone(phone)){
+            //短信内容
+            Company company=Company.dao.findById(User.dao.findById(orderMeet.getBelong()).getCid());
+            OrderCallType type=orderMeet.getIsCallInitiative()==Integer.parseInt(Constant.YES)?OrderCallType.CALL_INITIATIVE:OrderCallType.CALL_ONLY_HOST;
+            String smsContent=getOrderSmsContent(orderMeet,company,type);
+
+            Map<String,Object> paraMap=new HashMap<String,Object>();
+            paraMap.put(MessageConstant.MOBILE,phone);
+            paraMap.put(MessageConstant.SMS_CONTENT,smsContent);
+
+            Map<String,Object> resultMap= MessageUtil.sendMessage(paraMap);
+            //短信发送成功，扣费
+            if(resultMap.get(MessageConstant.STATUS).equals(MessageConstant.SUCCESS)){
+                charging(Long.parseLong(orderMeet.getRid().toString()),company.getId(),smsContent,name,phone);
             }else{
                 //发送失败，重发
                 try {
@@ -145,12 +187,12 @@ public class MessageServiceImpl implements MessageService {
                 } catch (InterruptedException e) {
                     log.error(e.getMessage(),e);
                 }
-                sendSms(orderMeet,phone);
+                sendOrderSms(orderMeet,phone,name);
             }
         }
     }
 
-    private void orderMeetCharging(final Long cid, final String msg){
+    private void orderMeetCharging(final Long cid, final String msg, final String name, final String phone){
         Db.tx(new IAtom() {
             @Override
             public boolean run() throws SQLException {
@@ -158,6 +200,9 @@ public class MessageServiceImpl implements MessageService {
                 //添加短信发送记录
                 Sms sms=new Sms();
                 sms.setMsg(msg);
+                sms.setName(name);
+                sms.setPhone(phone);
+                sms.setRate(fee.getRate()+"元/条");
                 sms.setFee(fee.getRate());
                 sms.setGmtCreate(new Date());
                 if(sms.save()){
@@ -177,61 +222,6 @@ public class MessageServiceImpl implements MessageService {
                 return false;
             }
         });
-    }
-
-
-    /**
-     * 获取预约会议开始时间
-     * @param orderMeet
-     * @return
-     */
-    private String getOrderMeetStartTime(OrderMeet orderMeet){
-        Map<String,Object> params=new HashMap<>();
-        params.put("oid",orderMeet.getId());
-        List<Schedule> scheduleList=Schedule.dao.getScheduleList(params);
-        Iterator<Schedule> itr=scheduleList.iterator();
-        SimpleDateFormat sdf=new SimpleDateFormat("HH:mm:ss");
-        int count=scheduleList.size();
-        int n=0;
-        StringBuilder temp=new StringBuilder();
-        while (itr.hasNext()){
-            n++;
-            Schedule sch=itr.next();
-            int type=sch.getOrderType();
-            String interval=sch.getInterval();
-            switch (type){
-                case 0://无重复周期
-                    return orderMeet.getStartTime();
-                case 1://重复周期为天
-                    if("workday".equals(interval)){
-                        return "每个工作日"+orderMeet.getStartTime();
-                    }else{
-                        return "每隔"+interval+"天"+orderMeet.getStartTime();
-                    }
-                case 2://重复周期为星期
-                    if(temp.length()==0){
-                        temp.append("每隔"+interval+"周周"+ DateUtil.getWeekday(sch.getOrderNum()));
-                    }else{
-                        temp.append("、周"+DateUtil.getWeekday(sch.getOrderNum()));
-                    }
-                    if(n==count){
-                        temp.append(" "+orderMeet.getStartTime());
-                        return temp.toString();
-                    }
-                case 3://重复周期为月
-                    String orderNum=sch.getOrderNum();
-                    if(orderNum==null){
-                        return "每个月第"+interval+"天"+orderMeet.getStartTime();
-                    }else{
-                        if("L".equals(interval)){
-                            return "每个月最后一周"+DateUtil.getWeekdayByNum(Integer.parseInt(orderNum))+" "+orderMeet.getStr("startTime");
-                        }else{
-                            return "每个月第"+interval+"周周"+DateUtil.getWeekdayByNum(Integer.parseInt(orderNum))+" "+orderMeet.getStr("startTime");
-                        }
-                    }
-            }
-        }
-        return temp.toString();
     }
 
     /**
@@ -244,4 +234,33 @@ public class MessageServiceImpl implements MessageService {
         List<Fee> feeList=Fee.dao.getFee(map);
         return feeList.isEmpty()?null:feeList.get(0);
     }
+
+    /**
+     * 获取预约会议短信通知的内容
+     * @param orderMeet
+     * @param type
+     * @return
+     */
+    private String getOrderSmsContent(OrderMeet orderMeet,Company company,OrderCallType type){
+        //短信内容
+        StringBuilder smsContent=new StringBuilder(250);
+        smsContent.append(orderMeet.getHostName());
+        smsContent.append("邀请您于");
+        smsContent.append(orderTimeService.getOrderMeetStartTime(orderMeet));
+        smsContent.append("参加");
+        smsContent.append(orderMeet.getSubject());
+        smsContent.append("，");
+
+        String callNum=AccessNum.dao.findById(company.getCallNum()).getNum();
+        if(type==OrderCallType.CALL_INITIATIVE) {
+            smsContent.append("请注意接听");
+            smsContent.append(callNum);
+            smsContent.append("的来电");
+        }else{
+            smsContent.append("请拨打"+callNum);
+            smsContent.append("并输入"+orderMeet.getHostPwd()+"参加会议");
+        }
+        return smsContent.toString();
+    }
+
 }

@@ -6,12 +6,10 @@ import com.dbkj.meet.dto.Node;
 import com.dbkj.meet.dto.Result;
 import com.dbkj.meet.interceptors.RemoveBillCacheInterceptor;
 import com.dbkj.meet.model.*;
-import com.dbkj.meet.model.Record;
 import com.dbkj.meet.services.common.MeetManager;
 import com.dbkj.meet.services.inter.*;
 import com.dbkj.meet.utils.RedisUtil;
 import com.dbkj.meet.utils.ValidateUtil;
-import com.dbkj.meet.vo.ChargesDetailVo;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.jfinal.aop.Before;
@@ -22,7 +20,8 @@ import com.jfinal.kit.HttpKit;
 import com.jfinal.kit.JsonKit;
 import com.jfinal.kit.PropKit;
 import com.jfinal.kit.StrKit;
-import com.jfinal.plugin.activerecord.*;
+import com.jfinal.plugin.activerecord.Db;
+import com.jfinal.plugin.activerecord.IAtom;
 import com.jfinal.plugin.ehcache.CacheKit;
 import com.jfinal.plugin.ehcache.IDataLoader;
 import org.apache.log4j.Logger;
@@ -52,12 +51,15 @@ public class MeetControlService implements IMeetControlService {
 
     private final Logger logger=Logger.getLogger(this.getClass());
 
-    private final IChargeService chargeService=new ChargeService();
+    private IChargeService chargeService=new ChargeService();
 
-    private final MessageService messageService=new MessageServiceImpl();
+    private MessageService messageService=new MessageServiceImpl();
 
-    private final ChargingService chargingService=new ChargingServiceImpl();
+    private ChargingService chargingService=new ChargingServiceImpl();
 
+    private INameService nameService=new NameServiceImpl();
+
+    private IPersonalContactsService personalContactsService;
     /**
      * 获取会议的相关数据
      * @param user 当前用户
@@ -113,12 +115,21 @@ public class MeetControlService implements IMeetControlService {
             //新增会议记录
             int meetNums=meetManager.getMeetNums();
             record=new Record().set("subject",name+"的电话会议").set("hostName", name).set("host", phone).set("allow_begin",Integer.parseInt(Constant.YES))
-                    .set("startTime",new Date()).set("hostPwd", hostPwd).set("listenerPwd", listenerPwd).set("meetNums", meetNums)
+                    .set("gmt_create",new Date()).set("hostPwd", hostPwd).set("listenerPwd", listenerPwd).set("meetNums", meetNums)
                     .set("belong", uid).set("status", MeetState.STARTED.getStateCode()).set("isRecord", 0).set("notice",Integer.parseInt(Constant.NO));
 
             boolean result= record.save();
 
             if(result){//会议记录添加成功
+                //添加主持人的参会人数据
+                Attendee attendee=new Attendee();
+                attendee.setName(name);
+                attendee.setPhone(phone);
+                attendee.setRid(Integer.parseInt(record.getId().toString()));
+                attendee.setType(AttendeeType.HOST.getCode());
+                attendee.setStatus(Integer.parseInt(Constant.WATING_CALL));
+                attendee.save();
+
                 Node node=new Node();
                 node.setName(name);
                 node.setPhone(phone);
@@ -186,6 +197,17 @@ public class MeetControlService implements IMeetControlService {
         Set<Node> attendeeList=getAttendeeDataFromRedis(recordId);
         if(attendeeList==null){
             attendeeList=new HashSet<>();
+            List<Attendee> alist = Attendee.dao.findByRecordId(recordId);
+            for(Attendee atd:alist){
+                Node node=new Node();
+                node.setId(atd.getId());
+                node.setName(atd.getName());
+                node.setPhone(atd.getPhone());
+                node.setRole(atd.getType());
+                node.setStatus(atd.getStatus().toString());
+                attendeeList.add(node);
+            }
+            addToRedis(attendeeList,recordId);
         }
         List<Node> list=new ArrayList<>(attendeeList);
         Collections.sort(list, new Comparator<Node>() {
@@ -212,7 +234,7 @@ public class MeetControlService implements IMeetControlService {
         if(attendeeList==null){
             attendeeList=new HashSet<>();
         }
-        synchronized (lock){
+//        synchronized (lock){
             boolean isRepeat=false;
             for(Node node:attendeeList){
                 if(node.getPhone().equals(attendee.getPhone())){
@@ -229,7 +251,7 @@ public class MeetControlService implements IMeetControlService {
             if(!isRepeat){
                 attendeeList.add(attendee);
             }
-        }
+//        }
         addToRedis(attendeeList,recordId);
         return true;
     }
@@ -272,7 +294,7 @@ public class MeetControlService implements IMeetControlService {
         Set<Node> attendeeList=getAttendeeDataFromRedis(recordId);
         Record record=Record.dao.findById(recordId);
         MeetState meetState = MeetState.valueOf(record.getStatus());
-        synchronized (lock){
+//        synchronized (lock){
             if(attendeeList!=null){
                 boolean flag=false;
                 if(meetState==MeetState.GOINGON){
@@ -299,7 +321,7 @@ public class MeetControlService implements IMeetControlService {
                 }
                 return flag;
             }
-        }
+//        }
         return false;
     }
 
@@ -418,7 +440,11 @@ public class MeetControlService implements IMeetControlService {
                     }
                 }
                 String name=map.get(Constant.NAME);
-                node.setName(name);;
+                if(StrKit.isBlank(name)||phone.equals(name)){
+                    name=nameService.getNameByPhone(uid,phone);
+                    name=name==null?phone:name;
+                }
+                node.setName(name);
                 node.setStatus(map.get(Constant.STATUS));
                 nodes.add(node);
             }
@@ -603,14 +629,15 @@ public class MeetControlService implements IMeetControlService {
             hostName=hostNum;
         }
 
-        record.set("hostName", hostName).set("status", MeetState.GOINGON.getStateCode()).set("startTime", new Date())
-                .set("isRecord", isRecord?1:0).set("subject",subject).set("mid",meetId).set("host",hostNum).
-                set("notice",notice?Constant.YES:Constant.NO).set("allow_begin",allowBegin?Constant.YES:Constant.NO);
+        Date date=new Date();
+        record.set("hostName", hostName).set("status", MeetState.GOINGON.getStateCode()).set("startTime", date)
+                .set("isRecord", isRecord?1:0).set("subject",subject).set("mid",meetId).set("host",hostNum).set("gmt_modified",date)
+                .set("notice",notice?Constant.YES:Constant.NO).set("allow_begin",allowBegin?Constant.YES:Constant.NO);
         return Db.tx(new IAtom() {
             @Override
             public boolean run() throws SQLException {
                 if(record.getType()==MeetType.FIXED_MEET.getCode()){//如果是固定会议，同时还要更新固定会议mid
-                    FixedMeet fixedMeet=FixedMeet.dao.findById(record.getSid());
+                    FixedMeet fixedMeet=FixedMeet.dao.findById(record.getOid());
                     if(fixedMeet!=null){
                         fixedMeet.set("mid",meetId).update();
                     }
@@ -631,7 +658,7 @@ public class MeetControlService implements IMeetControlService {
         //会议进行中
         if(MeetState.GOINGON.getStateCode()==record.getStatus()){
             String endTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-            record.set("status",MeetState.FINSHED.getStateCode()).set("endTime",endTime);
+            record.set("status",MeetState.FINSHED.getStateCode()).set("endTime",endTime).setGmtModified(new Date());
             return Db.tx(new IAtom() {
                 @Override
                 public boolean run() throws SQLException {
@@ -656,6 +683,7 @@ public class MeetControlService implements IMeetControlService {
         }
     }
 
+    @Before({RemoveBillCacheInterceptor.class})
     @Override
     public boolean cancelMeet(final Long rid) {
         if(rid!=null){
@@ -664,13 +692,16 @@ public class MeetControlService implements IMeetControlService {
                 return false;
             }
             if(MeetState.STARTED.getStateCode()==record.getStatus()){
-                return Db.tx(new IAtom() {
-                    @Override
-                    public boolean run() throws SQLException {
-                        Attendee.dao.deleteByRecordId(rid);
-                        return record.delete();
-                    }
-                });
+//                return Db.tx(new IAtom() {
+//                    @Override
+//                    public boolean run() throws SQLException {
+//                        Attendee.dao.deleteByRecordId(rid);
+//                        return record.delete();
+//                    }
+//                });
+                record.setStatus(MeetState.FINSHED.getStateCode());
+                record.setGmtModified(new Date());
+                return record.update();
             }
             //清除缓存中会议参会人数据
             clearAttendeeData(rid);
@@ -680,7 +711,9 @@ public class MeetControlService implements IMeetControlService {
 
     @Override
     public Result addPersonalContact(final BaseContact baseContact, final long uid) {
-        IPersonalContactsService personalContactsService=new PersonalContactService();
+        if(personalContactsService==null){
+            personalContactsService= new PersonalContactService();
+        }
         Result<BaseContact> result=validateContact(baseContact);
         if(!result.getResult()){//验证失败
             return result;
@@ -815,6 +848,18 @@ public class MeetControlService implements IMeetControlService {
                     }
                     record.update();
                 }
+
+                Integer oid=record.getOid();
+                if(oid!=null){
+                    OrderMeet orderMeet=OrderMeet.dao.findById(oid);
+                    //如果当前会议记录是预约会议创建的，清空rid字段
+                    if(orderMeet!=null){
+                        orderMeet.setRid(null);
+                        orderMeet.setGmtModified(new Date());
+                        orderMeet.update();
+                    }
+                }
+
                 Long rid=record.getId();
                 String callee=resultMap.get(Constant.CALLEE).toString();
                 Attendee attendee=new Attendee();
@@ -942,7 +987,8 @@ public class MeetControlService implements IMeetControlService {
                 if(record!=null&&record.getNotice()==Integer.parseInt(Constant.YES)
                         &&(Constant.CALL_STATUS_FAIL.equals(status)||Constant.CALL_STATUS_REJECT.equals(status))){
                     String phone=resultMap.get(Constant.CALLER).toString();
-                    messageService.sendMsg(record.getId(),phone);
+                    String name=nameService.getNameByPhone(Long.parseLong(record.getBelong().toString()),phone);
+                    messageService.sendMsg(record.getId(),phone,name);
                 }
                 break;
         }
@@ -1052,7 +1098,7 @@ public class MeetControlService implements IMeetControlService {
                             .set("startTime", new Date()).set("isRecord", fixedMeet.getIsRecord().equals(Constant.YES)?1:0)
                             .set("belong", uid).set("status", MeetState.STARTED.getStateCode()).set("hostPwd", fixedMeet.getHostPwd()).set("listenerPwd", fixedMeet.getListenerPwd())
                             .set("mid", fixedMeet.getMeetId()).set("hostName", fixedMeet.getHostName()).set("meetNums", meetManager.getMeetNums())
-                            .set("type", MeetType.FIXED_MEET.getCode()).set("sid",fixedMeet.getId());
+                            .set("type", MeetType.FIXED_MEET.getCode()).set("oid",fixedMeet.getId());
 
                     record.save();
                     //将参会人信息放进缓存

@@ -6,10 +6,10 @@ var meetlist={
     expand:function (dom) {
         var $content=$(dom).parent().next().find("td>div");
         if($content.is(":hidden")){
-            $(dom).find("img").get(0).src="/img/minus.gif";
+            $(dom).find("img").get(0).src=common.getContextPath()+"/img/minus.gif";
             $content.show();
         }else{
-            $(dom).find("img").get(0).src="/img/plus.gif";
+            $(dom).find("img").get(0).src=common.getContextPath()+"/img/plus.gif";
             $content.hide();
         }
     },
@@ -24,12 +24,13 @@ var meetlist={
                     data:obj,
                     dataType:"json",
                     success:function (data) {
+                        //common.isLoginTimeout(data);
                         if(data.result===true){//取消成功
                             $(dom).closest("tr").remove();
                         }else{
-                            if(data.result===undefined){//登陆过期
-                                location.href=common.getContextPath()+"/login"
-                            }
+                            // if(data.result===undefined){//登陆过期
+                            //     location.href=common.getContextPath()+"/login"
+                            // }
                         }
                     }
                 });

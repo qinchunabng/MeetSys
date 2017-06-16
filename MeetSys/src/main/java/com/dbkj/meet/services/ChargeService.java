@@ -120,7 +120,8 @@ public class ChargeService implements IChargeService {
             public Object load() {
                 SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyyMM");
                 Date now=new Date();
-                Record record = AccountBalance.dao.getAccountBalanceInfoById(id,simpleDateFormat.format(now));
+                String modeName=simpleDateFormat.format(now);
+                Record record = AccountBalance.dao.getAccountBalanceInfoById(id,modeName);
                 //如果没有查到当前月份的计费信息，则获取该账号最近一次计费模式信息并新增
                 if(record==null){
                     ChargingMode chargingMode=ChargingMode.dao.getLastByAccountBalanceId(id);
@@ -132,6 +133,7 @@ public class ChargeService implements IChargeService {
                     }
                     record=AccountBalance.dao.getAccountBalanceInfoById(id,simpleDateFormat.format(now));
                 }
+                logger.info("查询参数：id:{},name:{},结果:{}",id,modeName,record);
                 return record;
             }
         });

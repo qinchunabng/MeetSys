@@ -18,7 +18,7 @@ function jump(){
 		document.getElementById("second").innerText=n;
 		setTimeout("jump()",1000);
 	}else{
-		location.href="/login";
+		location.href="${ctx!}/login";
 	}
 }
 setTimeout("jump()",1000);

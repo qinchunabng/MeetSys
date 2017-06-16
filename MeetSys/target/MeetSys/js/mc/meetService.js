@@ -16,13 +16,13 @@ var meetService={
     isFirstStartRecord:true,//是否是首次开始录音
     remainSec:10,
     isShow:false,
-    serviceUrl:"ws://60.190.236.54:21280/app/meet_api",
+    serviceUrl:"ws://60.190.236.54:21280/meet1/meet_api",
     //初始化页面数据
     initPage:function () {
         //加载个人通信录
         $.ajax({
             type:"get",
-            url:"/personalcontacts/getContacts",
+            url:common.getContextPath()+"/personalcontacts/getContacts",
             dataType:"json",
             success:function(data){
                 $("body").data("personalContacts",data);
@@ -462,6 +462,8 @@ var meetService={
 
         webSocketUtil.getWebSocket(url,{
             onmessage:function (e) {
+                //关闭呼叫全部的tooltip
+                $("#invite_ctrl").tooltip("destroy");
                 meetService.reciveResult(e);
             }
         });
@@ -716,9 +718,9 @@ var meetService={
                 if(tel==phone){
                     var btn;
                     if(meetId){
-                        btn="<a href=\"javascript:;\" class=\"add-invite\"></a>";
-                    }else{
                         btn="<a href=\"javascript:;\" class=\"call\"></a>";
+                    }else{
+                        btn="<a href=\"javascript:;\" class=\"add-invite\"></a>";
                     }
                     $(this).find("td:last").html(btn);
                     return false;
@@ -1187,7 +1189,7 @@ var meetService={
             var rid=$("#rid").val();
             $.ajax({
                 type:"get",
-                url:"/meet/updateRecordState/"+rid,
+                url:common.getContextPath()+"/meet/updateRecordState/"+rid,
                 dataType:"json",
                 success:function (data) {
                     console.log("change record state success:"+data.result);
@@ -1239,7 +1241,45 @@ var meetService={
             dataType:"json",
             data:obj,
             success:function (data) {
+                common.isLoginTimeout(data);
+                if(data.result){//添加成功
+                    var groups = $("#personl_contacts").children("div.group");
+                    var length=groups.length;
+                    //个人联系人中没有分组
+                    if(length==0){
+                        var contactGrp="<div class='group' data-toggle='collapse' data-target='#personl_contacts_"+length+"' " +
+                            " aria-expanded='true' aria-controls='personl_contacts_"+length+"'>";
+                        contactGrp+="<i class='icon-caret-right'></i><input type='checkbox' class='chkAll'>未分组</div>";
+                        contactGrp+="<div class='collapse' id='personl_contacts_"+length+"' aria-expanded='true'>";
+                        contactGrp+="<table class='table table-hover table-condensed'><tbody><tr><td><input type='checkbox'>&nbsp;"+obj["c.name"]
+                            +"</td><td>"+obj["c.phone"]+"</td><td>已添加</td></tr></tbody></table></div>";
+                        $("#personl_contacts").append(contactGrp);
+                    }else{
+                        var $lastGroup=$(groups[length-1]);
 
+                        if($lastGroup.text().trim()=="未分组"){
+                            var contact="<tr>";
+                            contact+="<td><input type='checkbox'>&nbsp;"+obj["c.name"]+"</td>";
+                            contact+="<td>"+obj["c.phone"]+"</td>";
+                            contact+="<td>已添加</td>";
+                            contact+="</tr>";
+                            var $tbody = $lastGroup.next().find("table>tbody");
+                            if($tbody.get(0)){//未分组中有数据
+                                $tbody.append(contact);
+                            }else{//未分组中没有数据
+                                $lastGroup.next().html("<table class='table table-hover table-condensed'><tbody>"+contact+"</tbody></table>");
+                            }
+                        }else{//没有未分组
+                            var contactGrp="<div class='group' data-toggle='collapse' data-target='#personl_contacts_"+length+"' " +
+                                " aria-expanded='true' aria-controls='personl_contacts_"+length+"'>";
+                            contactGrp+="<i class='icon-caret-right'></i><input type='checkbox' class='chkAll'>未分组</div>";
+                            contactGrp+="<div class='collapse' id='personl_contacts_"+length+"' aria-expanded='true'>";
+                            contactGrp+="<table class='table table-hover table-condensed'><table><tbody><tr><td><input type='checkbox'>&nbsp;"+obj["c.name"]
+                                +"</td><td>"+obj["c.phone"]+"</td><td>已添加</td></tr></tbody></table></div>";
+                            $lastGroup.next().after(contact);
+                        }
+                    }
+                }
             },error:function (err) {
                 console.log(err.responseText);
             }
@@ -1253,8 +1293,8 @@ var meetService={
      */
     sendMsg:function (rid,phone,name) {
         $.post(common.getContextPath()+"/msg/send",{rid:rid,phone:phone,name:name},function (data) {
-            showInfo("已向"+name+"("+phone+")发送短信通知");
-            Alert("已向"+name+"("+phone+")发送短信通知");
+            showInfo("已向"+name+"("+phone+")发送通知");
+            Alert("已向"+name+"("+phone+")发送通知");
         });
     },
     /**

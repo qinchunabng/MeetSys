@@ -7,6 +7,7 @@ import com.dbkj.meet.model.Department;
 import com.jfinal.core.Controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 import java.util.Map;
 
@@ -48,11 +49,18 @@ public interface IUserService {
      * @param userData
      * @return
      */
-    boolean updateUserData(UserData userData,HttpServletRequest request);
+    boolean updateUserData(UserData userData);
 
     boolean deleteUsers(String idStr);
 
     Result<?> changePwd(ChangePwd changePwd,String username,HttpServletRequest request);
 
     void setPageData(HttpServletRequest request);
+
+    /**
+     * 修改个人资料
+     * @param userData
+     * @return
+     */
+    Result<?> updateSelf(UserData userData, HttpServletRequest request);
 }

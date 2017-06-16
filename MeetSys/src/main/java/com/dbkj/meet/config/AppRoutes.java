@@ -29,5 +29,6 @@ public class AppRoutes extends Routes {
         add("/account",AccountController.class,"/pages/account/");
         add("/msg",MessageController.class);
         add("/admin/package",PackageController.class,"/pages/admin/package/");
+        add("/smtp",SMTPController.class,"/pages/smtp");
     }
 }

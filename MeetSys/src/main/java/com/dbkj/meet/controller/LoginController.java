@@ -18,9 +18,11 @@ import com.jfinal.aop.Clear;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.interceptor.POST;
+import com.jfinal.kit.StrKit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpSession;
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -43,6 +45,9 @@ public class LoginController extends Controller {
         Map<String,Key> keyMap=loginService.getKeyMap();
         setAttr("publicKey",RSAUtil2.getPublicKey(keyMap));
         setSessionAttr(LoginService.KEY_MAP,keyMap);
+
+        UserLoginVo userLoginVo=loginService.getRememberUser(getRequest());
+        setAttr("user",userLoginVo);
         render("index.html");
     }
 
@@ -53,6 +58,7 @@ public class LoginController extends Controller {
         boolean result=loginService.login(user,this);
         if(result){//登陆成功
             //setSessionAttr(Constant.USER_KEY,user);
+
             int type = ((User)getSessionAttr(Constant.USER_KEY)).getAid();
             if(type== UserType.SUPER_ADMIN.getTypeCode()||type==UserType.SUPER_SUPER_ADMIN.getTypeCode()){//超级管理员
                 redirect("/admin");

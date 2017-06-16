@@ -4,6 +4,7 @@ import com.dbkj.meet.model.User;
 import com.dbkj.meet.vo.UserLoginVo;
 import com.jfinal.core.Controller;
 
+import javax.servlet.http.HttpServletRequest;
 import java.security.Key;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -30,4 +31,11 @@ public interface ILoginService {
     boolean login(UserLoginVo user, Controller controller);
 
     Map<String,Key> getKeyMap();
+
+    /**
+     * 获取记住密码的登陆用户信息
+     * @param request
+     * @return
+     */
+    UserLoginVo getRememberUser(HttpServletRequest request);
 }

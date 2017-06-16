@@ -1,7 +1,7 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "会议记录" 7>
     <meta charset="UTF-8">
-    <link href="/css/record.css" rel="stylesheet" type="text/css"/>
+    <link href="${ctx!}/css/record.css" rel="stylesheet" type="text/css"/>
     <input type="hidden" value="${ctx!}" id="contextPath"/>
     <div class="search conference">
         <div class="block_h1_top"></div>
@@ -37,7 +37,7 @@
                 <#if (records?size>0)>
                     <#list records as item>
                         <tr class="tb-todaymeeting">
-                            <td class="cwidth">${item.startTime}</td>
+                            <td class="cwidth">${(item.startTime)!}</td>
                             <td class="swidth">${item.subject}</td>
                             <td class="twidth">${item.hostName}</td>
                             <td class="twidth">${item.count}</td>

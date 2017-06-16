@@ -30,7 +30,7 @@
 				   		</select>
 				   		<input type="text" id="companyCode" placeholder="公司代码" class="input-text" tabindex="3" style="width: 60px;"/>
 				   </p> -->
-				  <#if (times??&&times?number>=1)||(user.authCode)??>
+				  <#if (times??&&times?number>=3)||(user.authCode)??>
 				  <p class="clearfix" id="vertifyCode">
 				   		<label for="authCode">验证码：</label>
 				   		<input type="text" id="authCode" name="user.authCode" value="${(user.authCode)!}" tabindex="4" id="vcodeid" class="input-text" style="float:left;width:55px;padding:5px 2px;" maxlength="6"/>

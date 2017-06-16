@@ -22,8 +22,7 @@ public class InfoInterceptor implements Interceptor{
         }else{
             Employee employee=Employee.dao.findById(user.getEid());
             if(employee==null){
-                String contextPath=controller.getRequest().getContextPath();
-                controller.redirect(contextPath+"/employee/showPrefect");
+                controller.redirect("/employee/showPrefect");
             }else{
                 invocation.invoke();
             }

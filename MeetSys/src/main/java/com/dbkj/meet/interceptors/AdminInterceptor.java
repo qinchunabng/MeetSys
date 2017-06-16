@@ -18,8 +18,7 @@ public class AdminInterceptor implements Interceptor {
         if(user.getAid()== UserType.SUPER_ADMIN.getTypeCode()||user.getAid()==UserType.SUPER_SUPER_ADMIN.getTypeCode()){
             invocation.invoke();
         }else{
-            String contextPath=controller.getRequest().getContextPath();
-            controller.render(contextPath+"/pages/other/noauth.html");
+            controller.render("/pages/other/noauth.html");
         }
     }
 }

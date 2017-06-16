@@ -5,7 +5,7 @@ a, img {border-style: none;}
 .part2 .taocan a:link, a:visited {text-decoration: underline;}
 .part2 .btn a:link, a:visited {text-decoration: none;}
 .part1 {width: 100%;background: #246fd5;}
-.part1 .block {overflow: hidden;width: 990px;margin: 0 auto;height: 30px;background: url("/img/top_banner.gif") no-repeat;}
+.part1 .block {overflow: hidden;width: 990px;margin: 0 auto;height: 30px;background: url("../img/top_banner.gif") no-repeat;}
 .part1 .block p {display: block;float: left;margin-top: 3px;color: #FFF;}
 .part1 .block div {display: block;float: right;margin-top: 3px;color: #FFF;}
 .part2 {width: 100%;border-bottom: 1px solid #CCC;}
@@ -20,7 +20,7 @@ a, img {border-style: none;}
 .part2 .btn {float: right;overflow: hidden;width: 120px;height: 59px;margin-top: 40px;display: inline-block;}
 .part3 .block {width: 990px;margin: 0 auto;}
 .part2 .btn div {display: inline;float: left;}
-.part2 .btn .header_02 {background: url("/img/exit.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);padding: 32px 12px 10px 17px;}
+.part2 .btn .header_02 {background: url("../img/exit.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);padding: 32px 12px 10px 17px;}
 .part3 .infoStyle {margin: 0 auto;position: relative;width: 700px;}
 .part3 .formClass{font-family: arial;font-size: 12px;}
 .part3 .formClass .main_form {width: 100%;padding-bottom: 10px;}
@@ -31,7 +31,7 @@ ul, li, td, tr, table {margin: 0px;padding: 0px;list-style: none;}
 /*.part3 .formClass .main_form */.text {border: 1px solid #BBBBBB;font-family: arial;font-size: 14px;height: 16px;padding: 4px 3px;width: 240px;}
 .part3 .formClass .main_form .highlight1{border:1px solid #EFA100;outline: 2px solid #FFDC97;}
 .part3 .formClass .main_form .highlight2 {border: 1px solid #FF0000;color: #FF0000;outline: 1px solid #FFC1C1;}
-.part3 .formClass .icon_orderly {background: url("/img/pwdstrength.gif") no-repeat scroll -105px 0 transparent;display: inline-block;font-size: 0;height: 16px;line-height: 0;vertical-align: middle;width: 16px;margin-left: 2px;}
+.part3 .formClass .icon_orderly {background: url("../img/pwdstrength.gif") no-repeat scroll -105px 0 transparent;display: inline-block;font-size: 0;height: 16px;line-height: 0;vertical-align: middle;width: 16px;margin-left: 2px;}
 .addConTip {font-size: 12px;color: #999999;line-height: 22px;}
 .part3 .formClass .main_form .null, .error {font-size: 12px;color: red;line-height: 22px;}
 .part3 .formClass .main_form .error{padding-left: 3px;}
@@ -39,7 +39,7 @@ ul, li, td, tr, table {margin: 0px;padding: 0px;list-style: none;}
 .keyClass {color: #FF0000;font-family: SimSun;font-size: 14px;margin-right: 3px;}
 .part3 .formClass .main_form .textareaBox {width: 248px;height: 44px;border: 1px solid #BBB;}
 .part3 .formClass .btndiv {padding-top: 10px;}
-.btn_sytle {background: url("/img/bgImg.gif") repeat-x scroll 0 0 transparent;border-radius: 5px;border: 0 none;color: #FFFFFF;cursor: pointer;display: inline-block;font-family: '΢���ź�','����','�꿬��';font-size: 14px;font-weight: bold;line-height: 20px;overflow: hidden;padding: 3px 15px 2px 15px !important;padding: 0px 8px 2px 6px;margin-right: 3px;vertical-align: middle;}
+.btn_sytle {background: url("../img/bgImg.gif") repeat-x scroll 0 0 transparent;border-radius: 5px;border: 0 none;color: #FFFFFF;cursor: pointer;display: inline-block;font-family: '΢���ź�','����','�꿬��';font-size: 14px;font-weight: bold;line-height: 20px;overflow: hidden;padding: 3px 15px 2px 15px !important;padding: 0px 8px 2px 6px;margin-right: 3px;vertical-align: middle;}
 .part3 .new_group {color: #0084B2;cursor: pointer;}
 .part3 .formClass .eitem {width: 100%;clear: both;line-height: 22px;padding-top: 1px;overflow: hidden;  height: 50px;}
 select, input, textarea {font-size: 12px;line-height: 1.2em;}

@@ -35,6 +35,7 @@ public class RSAUtil2 {
      */
     public static final String DEFUALT_CHARSET="utf8";
 
+
     /**
      * 生成密钥对
      * @return
@@ -96,6 +97,36 @@ public class RSAUtil2 {
     }
 
     /**
+     * 加密
+     * @param data
+     * @param publicKey
+     * @return
+     */
+    public static byte[] encrypt(byte[] data,Key publicKey){
+        Security.addProvider(new BouncyCastleProvider());
+        try {
+            Cipher cipher=Cipher.getInstance("RSA/None/PKCS1Padding","BC");
+            cipher.init(Cipher.ENCRYPT_MODE,publicKey);
+            return cipher.doFinal(data);
+        } catch (NoSuchAlgorithmException|NoSuchProviderException|BadPaddingException
+                |InvalidKeyException|IllegalBlockSizeException|NoSuchPaddingException e) {
+            logger.error(e.getMessage(),e);
+        }
+        return null;
+    }
+
+    /**
+     *
+     * @param data
+     * @param publicKey
+     * @return
+     * @throws UnsupportedEncodingException
+     */
+    public static String encryptBase64(String data,Key publicKey) throws UnsupportedEncodingException {
+        return new String(Base64.encodeBase64(encrypt(data.getBytes(DEFUALT_CHARSET),publicKey)),DEFUALT_CHARSET);
+    }
+
+    /**
      * 获取私钥
      * @param keyMap 密钥对
      * @return
@@ -113,5 +144,15 @@ public class RSAUtil2 {
     public static String getPublicKey(Map<String,Key> keyMap){
         Key key= keyMap.get(PUBLIC_KEY);
         return Base64.encodeBase64String(key.getEncoded());
+    }
+
+    public static void main(String[] args) throws UnsupportedEncodingException {
+        Map<String,Key> keyMap = generateKeys();
+        String source="1234567890112315465446546545646";
+        System.out.println("加密长度："+source.getBytes(DEFUALT_CHARSET).length);
+        String encrypted=encryptBase64(source,keyMap.get(PUBLIC_KEY));
+        System.out.println("加密后："+encrypted);
+        String decrypted=decryptBase64(encrypted,keyMap.get(PRIVATE_KEY));
+        System.out.println("解密后："+decrypted);
     }
 }

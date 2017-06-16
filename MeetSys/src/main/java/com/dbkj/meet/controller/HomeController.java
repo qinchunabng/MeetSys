@@ -12,11 +12,11 @@ public class HomeController extends Controller {
 
     public void index(){
         User user=getSessionAttr(Constant.USER_KEY);
-        String contextPath=getRequest().getContextPath();
-        if(UserType.SUPER_ADMIN.getTypeCode()==user.getAid()){//超级管理员
-            redirect(contextPath.concat("/admin"));
+        if(UserType.SUPER_ADMIN.getTypeCode()==user.getAid()||
+                UserType.SUPER_SUPER_ADMIN.getTypeCode()==user.getAid()){//系统管理员
+            redirect("/admin");
         }else{//
-            redirect(contextPath.concat("/meetlist"));
+            redirect("/meetlist");
         }
     }
 }

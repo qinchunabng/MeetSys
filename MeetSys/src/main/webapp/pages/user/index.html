@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "用户管理" 5>
     <meta charset="UTF-8">
     <link href="${ctx!}/css/user.css" rel="stylesheet" type="text/css"/>
@@ -45,7 +45,7 @@
                     </tr>
                 </table>
                 <div id="user-content" class="user-content">
-                    <div id="loadTip" class="loadingStyle" style="display: none;"><img src="/img/loading.gif"></div>
+                    <div id="loadTip" class="loadingStyle" style="display: none;"><img src="${ctx!}/img/loading.gif"></div>
                     <table class="ctable" id="userTable">
                         <#if (users?size>0)>
                             <#list users as item>

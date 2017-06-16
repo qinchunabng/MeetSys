@@ -1,7 +1,6 @@
 package com.dbkj.meet.validator;
 
 import com.dbkj.meet.dic.Constant;
-import com.dbkj.meet.model.User;
 import com.dbkj.meet.vo.UserLoginVo;
 import com.jfinal.core.Controller;
 import com.jfinal.i18n.I18n;

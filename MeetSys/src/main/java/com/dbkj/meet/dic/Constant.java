@@ -5,6 +5,8 @@ package com.dbkj.meet.dic;
  */
 public interface Constant {
 
+    String KEY_MAP="RSAKeyMap";
+
     /**
      * 固定会议转接号码
      */

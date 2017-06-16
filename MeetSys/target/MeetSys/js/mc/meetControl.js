@@ -1,4 +1,6 @@
 $(function () {
+    //初始化tooltip
+    $("[data-toggle='tooltip']").tooltip();
     var local={};
     //初始化
     meetService.initPage();
@@ -172,9 +174,19 @@ $(function () {
             if (phone.trim() == "") {
                 Alert("电话号码不能为空！");
                 flag = false;
-            } else if (!common.phoneRegex.test(phone) && !common.telRegex.test(phone)) {
-                Alert("电话号码格式不正确！");
-                flag=false;
+            } else  {
+                //如果号码中包含"-"，且短横前的位数小于4位，则去掉"-"
+                var idx=phone.indexOf("-");
+                if(idx!=-1){
+                    var prefix=phone.substring(0,idx);
+                    if(prefix.length<=4){
+                        phone = phone.replace("-","");
+                    }
+                }
+                if (!common.phoneRegex.test(phone) && !common.telRegex.test(phone)){
+                    Alert("电话号码格式不正确！");
+                    flag=false;
+                }
             }
         }
 
@@ -291,7 +303,7 @@ $(function () {
         phone = phone.substring(phone.indexOf("(") + 1, phone.indexOf(")"));
         var type = arr[1];
         type = type.substring(0, type.indexOf("("));
-        if (type == "个人通讯录") {
+        if (type == "公共通讯录") {
             type = 0;
         } else {
             type = 1;

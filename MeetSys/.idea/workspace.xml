@@ -6,8 +6,497 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25e089e4-e597-4075-8aab-6a6578aaa22a" name="Default" comment="">
+    <list default="true" id="25e089e4-e597-4075-8aab-6a6578aaa22a" name="Default" comment="修预约会议为重复类型的，首次开始时间为当前时间之前的时间时，预约会议会立即开始的bug。">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/MeetSys_war/MeetSys_war.war" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/BaseAdminController.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/proxy/ClearCacheProxy.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/BaseAdminController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/OrderMeetService$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/OrderMeetService$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/ScheduleJob$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/proxy/ClearCacheProxy.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/BaseAdminController.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$13.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/OrderMeetService$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/OrderMeetService$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/ScheduleJob$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/proxy/ClearCacheProxy.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/vertifycode/code.jpg" afterPath="$PROJECT_DIR$/src/main/webapp/vertifycode/code.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/config/AppRoutes.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/config/AppRoutes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/AccountController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/AccountController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/ChargeController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/ChargeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/ChargingController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/ChargingController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/CompanyController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/CompanyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/DepartmentController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/DepartmentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/EmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MeetController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MeetController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MeetListController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MeetListController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MeetingRecordController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MeetingRecordController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MessageController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/MessageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/OrderMeetController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/OrderMeetController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/PackageController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/PackageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/PersonalContactsController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/PersonalContactsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/PublicContactsController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/PublicContactsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/RateController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/RateController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/UserController.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/converter/BillDetailConverter.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/converter/BillDetailConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/dic/Constant.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/dic/Constant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/dic/MeetState.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/dic/MeetState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/dto/OrderModel.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/dto/OrderModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/AdminInterceptor.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/AdminInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/BalanceInterceptor.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/BalanceInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/InfoInterceptor.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/InfoInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/LoginInterceptor.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/LoginInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/SAdminInterceptor.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/SAdminInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/UserInterceptor.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/interceptors/UserInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/Bill.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/Bill.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/Employee.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/Employee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/OrderMeet.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/OrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/PrivateContacts.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/PrivateContacts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/PublicContacts.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/PublicContacts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/Record.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/Record.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/_MappingKit.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/_MappingKit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/base/BaseOrderMeet.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/base/BaseOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/base/BaseRecord.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/base/BaseRecord.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/base/BaseSms.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/model/base/BaseSms.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/AccountService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/AccountService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService$3.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ChargeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService$3.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/CompanyService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/DepartmentService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/DepartmentService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/DepartmentService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/DepartmentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/EmployeeService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/EmployeeService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/EmployeeService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/EmployeeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/LoginService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/LoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$10.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$11.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$12.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$3.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$4.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$5.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$6.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$7.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$8.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$9.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetControlService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetListService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MeetListService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MessageServiceImpl$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MessageServiceImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MessageServiceImpl$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MessageServiceImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MessageServiceImpl.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/MessageServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/OrderMeetService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/OrderMeetService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/OrderMeetService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/OrderMeetService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$3.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$4.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$5.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PersonalContactService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$3.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$4.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/PublicContactService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService$3.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/common/MeetManager$1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/common/MeetManager$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/common/MeetManager$2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/common/MeetManager$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/common/MeetManager.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/common/MeetManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/ILoginService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/ILoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/IPersonalContactsService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/IPersonalContactsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/IUserService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/IUserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/MessageService.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/inter/MessageService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/OrderMeetContext.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/OrderMeetContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RemindScheduleJob.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RemindScheduleJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/ScheduleJob.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/services/ordermeet/ScheduleJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/AESUtil.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/AESUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/AESUtil1.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/AESUtil1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/DateUtil.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/DateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/RSAUtil2.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/RSAUtil2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/RedisUtil.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/RedisUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/ScheduleHelper.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/ScheduleHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/ValidateUtil.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/utils/ValidateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/validator/LoginValidator.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/validator/LoginValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/validator/UserDataValidator.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/validator/UserDataValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/vo/UserLoginVo.class" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/com/dbkj/meet/vo/UserLoginVo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/vertifycode/code.jpg" afterPath="$PROJECT_DIR$/target/MeetSys/vertifycode/code.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/config/AppRoutes.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/config/AppRoutes.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/AccountController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/AdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/ChargeController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/ChargeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/ChargingController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/ChargingController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/CompanyController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/CompanyController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/DepartmentController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/DepartmentController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/EmployeeController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/EmployeeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/HomeController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/HomeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/LoginController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MeetController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MeetController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MeetListController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MeetListController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MeetingRecordController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MeetingRecordController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MessageController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/MessageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/OrderMeetController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/OrderMeetController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/PackageController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/PackageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/PersonalContactsController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/PersonalContactsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/PublicContactsController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/PublicContactsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/RateController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/RateController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/controller/UserController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/converter/BillDetailConverter.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/converter/BillDetailConverter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/dic/Constant.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/dic/Constant.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/dic/MeetState.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/dic/MeetState.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/dto/OrderModel.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/dto/OrderModel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/AdminInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/AdminInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/BalanceInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/BalanceInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/InfoInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/InfoInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/LoginInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/LoginInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/SAdminInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/SAdminInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/UserInterceptor.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/interceptors/UserInterceptor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/Bill.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/Bill.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/Employee.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/Employee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/OrderMeet.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/OrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/PrivateContacts.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/PrivateContacts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/PublicContacts.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/PublicContacts.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/Record.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/Record.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/_MappingKit.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/_MappingKit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/base/BaseOrderMeet.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/base/BaseOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/base/BaseRecord.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/base/BaseRecord.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/base/BaseSms.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/model/base/BaseSms.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/AccountService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/AccountService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService$3.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ChargeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService$3.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/CompanyService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/DepartmentService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/DepartmentService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/DepartmentService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/DepartmentService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/EmployeeService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/EmployeeService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/EmployeeService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/EmployeeService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/LoginService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/LoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$10.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$10.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$11.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$11.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$12.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$3.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$4.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$5.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$6.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$7.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$8.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$9.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetControlService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetListService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MeetListService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MessageServiceImpl$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MessageServiceImpl$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MessageServiceImpl$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MessageServiceImpl$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MessageServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/MessageServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/OrderMeetService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/OrderMeetService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/OrderMeetService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/OrderMeetService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$3.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$4.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$5.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PersonalContactService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$3.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$4.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/PublicContactService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService$3.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/UserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/common/MeetManager$1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/common/MeetManager$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/common/MeetManager$2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/common/MeetManager$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/common/MeetManager.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/common/MeetManager.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/ILoginService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/ILoginService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/IPersonalContactsService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/IPersonalContactsService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/IUserService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/IUserService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/MessageService.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/inter/MessageService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/OrderMeetContext.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/OrderMeetContext.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RemindScheduleJob.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RemindScheduleJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/ScheduleJob.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/services/ordermeet/ScheduleJob.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/AESUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/AESUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/AESUtil1.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/AESUtil1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/DateUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/DateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/RSAUtil2.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/RSAUtil2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/RedisUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/RedisUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/ScheduleHelper.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/ScheduleHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/ValidateUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/utils/ValidateUtil.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/validator/LoginValidator.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/validator/LoginValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/validator/UserDataValidator.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/validator/UserDataValidator.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/dbkj/meet/vo/UserLoginVo.class" afterPath="$PROJECT_DIR$/target/classes/com/dbkj/meet/vo/UserLoginVo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/MeetSys_war.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/MeetSys_war.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/MeetSys_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/MeetSys_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MeetSys.iml" afterPath="$PROJECT_DIR$/MeetSys.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jfinal_demo.log" afterPath="$PROJECT_DIR$/jfinal_demo.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/config/AppRoutes.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/config/AppRoutes.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AccountController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/ChargeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/ChargeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/ChargingController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/ChargingController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/CompanyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/CompanyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/DepartmentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/DepartmentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/EmployeeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/EmployeeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/HomeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetListController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetListController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetingRecordController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetingRecordController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MessageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MessageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/OrderMeetController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/OrderMeetController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PackageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PackageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PersonalContactsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PersonalContactsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PublicContactsController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PublicContactsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/RateController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/RateController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/converter/BillDetailConverter.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/converter/BillDetailConverter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dic/Constant.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dic/Constant.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dic/MeetState.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dic/MeetState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/OrderModel.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/OrderModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/AdminInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/AdminInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/BalanceInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/BalanceInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/InfoInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/InfoInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/LoginInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/LoginInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/SAdminInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/SAdminInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/UserInterceptor.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/UserInterceptor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Bill.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Bill.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Employee.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/OrderMeet.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/OrderMeet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PublicContacts.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PublicContacts.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Record.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Record.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/_MappingKit.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/_MappingKit.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/base/BaseOrderMeet.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/base/BaseOrderMeet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/base/BaseRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/base/BaseRecord.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/base/BaseSms.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/base/BaseSms.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/AccountService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/AccountService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/CompanyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/CompanyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/DepartmentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/DepartmentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/EmployeeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/EmployeeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetControlService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetControlService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetListService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetListService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MessageServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MessageServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderMeetService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderMeetService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PersonalContactService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PersonalContactService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PublicContactService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PublicContactService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/UserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/common/MeetManager.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/common/MeetManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/ILoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/ILoginService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IOrderMeetService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IOrderMeetService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IPersonalContactsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IPersonalContactsService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IUserService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IUserService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/MessageService.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/MessageService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/OrderMeetContext.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/OrderMeetContext.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RemindScheduleJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RemindScheduleJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/ScheduleJob.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/ScheduleJob.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/AESUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/AESUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/AESUtil1.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/AESUtil1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/DateUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/DateUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/RSAUtil2.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/RSAUtil2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/RedisUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/RedisUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ScheduleHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ScheduleHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ValidateUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ValidateUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/LoginValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/LoginValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/UserDataValidator.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/UserDataValidator.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/vo/UserLoginVo.java" afterPath="$PROJECT_DIR$/src/main/java/com/dbkj/meet/vo/UserLoginVo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/config.properties" afterPath="$PROJECT_DIR$/src/main/resources/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/il8n_zh_CN.properties" afterPath="$PROJECT_DIR$/src/main/resources/il8n_zh_CN.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sql.properties" afterPath="$PROJECT_DIR$/src/main/resources/sql.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/account/bill.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/account/bill.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/addcontact.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/addcontact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/adduser.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/adduser.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/admin.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/admin/charge_detail.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin/charge_detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/admin/charge_list.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin/charge_list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/admin/rate.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/admin/rate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/changepwd.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/changepwd.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/common.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/contacts.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/contacts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/createmeet.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/createmeet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/export.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/export.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/info.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/info.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/manage.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/manage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/meeting-detail.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/meeting-detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/meetingrecord.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/meetingrecord.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/meetlist.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/meetlist.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/msg_vertify.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/msg_vertify.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/netmeeting.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/netmeeting.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/perfectinfo.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/perfectinfo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/personal/result.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/personal/result.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/personalcontact.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/personalcontact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/phonemeeting.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/phonemeeting.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/publiccontacts.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/publiccontacts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/record.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/record.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/record/detail.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/record/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/retrieve_common.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/retrieve_common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/ulist-left.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/ulist-left.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/user.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/user.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/common.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/mc/meetControl.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/mc/meetControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/mc/meetService.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/mc/meetService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/meetlist/list.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/meetlist/list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/order/order.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/order/order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/user/user.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/user/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/account/bill.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/account/bill.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/add.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/addCompany.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/addCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/changepwd.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/changepwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/changePackage.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/changePackage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/charge.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/charge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/detail.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/record.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/record.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charging/list.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charging/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/charging/record.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/charging/record.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/layout.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/package/add.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/package/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/package/list.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/package/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/rate/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/rate/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/threshold/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/threshold/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/admin/updateCompany.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/admin/updateCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/common/layout.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/common/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/employee/info.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/employee/info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/login/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/login/layout.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/login/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/meetlist/detail.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/meetlist/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/meetlist/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/meetlist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/order/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/order/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/other/noauth.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/other/noauth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/other/relogin.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/other/relogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/personal/add.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/personal/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/personal/import.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/personal/import.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/personal/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/personal/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/personal/result.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/personal/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/pub/add.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/pub/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/pub/import.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/pub/import.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/pub/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/pub/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/pub/result.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/pub/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/record/detail.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/record/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/record/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/record/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/user/add.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/user/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/user/changePwd.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/user/changePwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/pages/user/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/pages/user/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/config.properties" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/il8n_zh_CN.properties" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/il8n_zh_CN.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/sql.properties" afterPath="$PROJECT_DIR$/target/MeetSys/WEB-INF/classes/sql.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/account/bill.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/account/bill.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/addcontact.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/addcontact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/adduser.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/adduser.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/admin.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/admin.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/admin/charge_detail.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/admin/charge_detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/admin/charge_list.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/admin/charge_list.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/admin/rate.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/admin/rate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/changepwd.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/changepwd.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/common.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/contacts.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/contacts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/createmeet.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/createmeet.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/export.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/export.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/info.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/info.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/manage.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/manage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/meeting-detail.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/meeting-detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/meetingrecord.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/meetingrecord.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/meetlist.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/meetlist.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/msg_vertify.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/msg_vertify.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/netmeeting.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/netmeeting.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/perfectinfo.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/perfectinfo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/personal/result.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/personal/result.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/personalcontact.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/personalcontact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/phonemeeting.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/phonemeeting.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/publiccontacts.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/publiccontacts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/record.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/record.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/record/detail.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/record/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/retrieve_common.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/retrieve_common.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/ulist-left.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/ulist-left.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/css/user.css" afterPath="$PROJECT_DIR$/target/MeetSys/css/user.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/js/common.js" afterPath="$PROJECT_DIR$/target/MeetSys/js/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/js/mc/meetControl.js" afterPath="$PROJECT_DIR$/target/MeetSys/js/mc/meetControl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/js/mc/meetService.js" afterPath="$PROJECT_DIR$/target/MeetSys/js/mc/meetService.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/js/meetlist/list.js" afterPath="$PROJECT_DIR$/target/MeetSys/js/meetlist/list.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/js/order/order.js" afterPath="$PROJECT_DIR$/target/MeetSys/js/order/order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/js/user/user.js" afterPath="$PROJECT_DIR$/target/MeetSys/js/user/user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/account/bill.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/account/bill.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/add.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/addCompany.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/addCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/changepwd.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/changepwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/changePackage.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/changePackage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/charge.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/charge.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/detail.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/list.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/record.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charge/record.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charging/list.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charging/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/charging/record.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/charging/record.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/layout.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/package/add.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/package/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/package/list.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/package/list.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/rate/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/rate/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/threshold/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/threshold/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/admin/updateCompany.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/admin/updateCompany.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/common/layout.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/common/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/employee/info.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/employee/info.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/login/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/login/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/login/layout.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/login/layout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/mc/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/mc/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/meetlist/detail.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/meetlist/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/meetlist/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/meetlist/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/order/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/order/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/other/noauth.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/other/noauth.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/other/relogin.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/other/relogin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/personal/add.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/personal/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/personal/import.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/personal/import.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/personal/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/personal/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/personal/result.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/personal/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/pub/add.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/pub/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/pub/import.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/pub/import.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/pub/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/pub/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/pub/result.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/pub/result.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/record/detail.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/record/detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/record/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/record/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/user/add.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/user/add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/user/changePwd.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/user/changePwd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MeetSys/pages/user/index.html" afterPath="$PROJECT_DIR$/target/MeetSys/pages/user/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/config.properties" afterPath="$PROJECT_DIR$/target/classes/config.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/il8n_zh_CN.properties" afterPath="$PROJECT_DIR$/target/classes/il8n_zh_CN.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/sql.properties" afterPath="$PROJECT_DIR$/target/classes/sql.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="MeetSys.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,53 +536,109 @@
     <favorites_list name="MeetSys" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="OrderMeetService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderMeetService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+              <folding>
+                <element signature="e#2122#2138#0" expanded="true" />
+                <element signature="e#2955#2969#0" expanded="true" />
+                <element signature="e#3735#3751#0" expanded="true" />
+                <element signature="e#3798#3808#0" expanded="true" />
+                <element signature="e#3862#3872#0" expanded="true" />
+                <element signature="e#4007#4017#0" expanded="true" />
+                <element signature="e#4324#4338#0" expanded="true" />
+                <element signature="e#4739#4753#0" expanded="true" />
+                <element signature="e#5171#5181#0" expanded="true" />
+                <element signature="e#5318#5328#0" expanded="true" />
+                <element signature="e#5652#5666#0" expanded="true" />
+                <element signature="e#6102#6116#0" expanded="true" />
+                <element signature="e#15931#16495#0" expanded="true" />
+                <element signature="e#16494#16495#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25">
+              <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1250">
+              <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="30" column="83" lean-forward="true" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="AnnotationType" />
         <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="HTML File" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>addInvite</find>
-      <find>gethost</find>
-      <find>getHostNum</find>
-      <find>call</find>
-      <find>ChargingMode</find>
-      <find>Company</find>
-      <find>code</find>
-      <find>User</find>
-      <find>rateStr</find>
-      <find>addHost</find>
-      <find>level</find>
-      <find>getMeetData</find>
-      <find>findByUserId</find>
-      <find>getAccountBalanceInfoById</find>
-      <find>encrypt</find>
-      <find>pe</find>
-      <find>addUserData</find>
-      <find>updateUserData</find>
-      <find>updatePassword</find>
-      <find>encryptPwd</find>
-      <find>rec</find>
-      <find>charge</find>
-      <find>getAccountInfoById</find>
-      <find>AccountBalance</find>
+      <find>cance</find>
+      <find>getContactsPage</find>
+      <find>Employee</find>
       <find>PrivateContacts</find>
+      <find>Delete</find>
+      <find>deleteNotExistByCompanyId</find>
+      <find>deleteContacts</find>
+      <find>delete</find>
+      <find>deleteCont</find>
+      <find>remove</find>
       <find>getContacts</find>
-      <find>currentIndex</find>
-      <find>charging</find>
-      <find>findUser</find>
-      <find>create</find>
+      <find>addS</find>
+      <find>add</find>
+      <find>addPersonalContact</find>
+      <find>clear</find>
+      <find>getEmailByUsername</find>
+      <find>getMeetListByUserId</find>
+      <find>remindJob</find>
+      <find>validate</find>
+      <find>callNum</find>
+      <find>getRemind</find>
+      <find>addR</find>
+      <find>get</find>
+      <find>getOrderMeet</find>
+      <find>getAttendeeList</find>
+      <find>orderModel</find>
+      <find>notice</find>
+      <find>getName</find>
+      <find>record</find>
+      <find>getJo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -112,57 +657,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargingServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PackageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetControlService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/AmountService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/PageData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/RSAUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/login/test.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/vo/UserLoginVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/converter/UserConverter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/ILoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/common.js" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/RSAUtil2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/UserData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/ChangePwd.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/add.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/user/changePwd.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/vo/AdminUserVo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IAdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AdminController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/ChangePwdValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/admin/changepwd.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/UserValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/admin/add.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dic/SMSConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dic/MessageConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/EmployeeValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/AdminService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetListService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/RemoveBalanceInCacheInterceptor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargeService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/config/AppConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/other/404.html" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/other/500.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PersonalContactService.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/LoginValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/login/index.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/UserDataValidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ValidateUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/SMTPServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/record/index.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/record/detail.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/BalanceInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/HomeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/BusinessInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/BaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/base/BaseAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/EmployeeController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetingRecordController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetListController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/OrderMeetController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PublicContactsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/UserService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Record.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetControlService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PublicContacts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/meetlist/detail.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/inter/IPersonalContactsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PersonalContactsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PersonalContactService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/mc/meetControl.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sql.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MessageServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/mc/index.html" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/mc/meetService.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/pages/personal/add.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/order/index.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/OrderModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/WebUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/LoginInterceptor.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/meetlist/list.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/common.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/order/order.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/MailUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/user/user.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RemindScheduleJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/ScheduleJob.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/OrderMeetContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargeService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderMeetService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/pages/login/index.html" />
       </list>
     </option>
   </component>
@@ -178,6 +723,13 @@
     <option name="FILTER_INFO" value="false" />
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/apache-maven-3.5.0" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
@@ -224,8 +776,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -252,20 +802,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeetSys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeetSys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -327,7 +863,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="personal" />
+              <option name="myItemId" value="login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -346,36 +882,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeetSys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MeetSys" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="meet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,17 +910,45 @@
               <option name="myItemId" value="meet" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="MeetSys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MeetSys" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="meet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2045977" />
@@ -441,20 +975,40 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.dbkj.meet.validator" />
-      <recent name="com.dbkj.meet.services" />
       <recent name="com.dbkj.meet.vo" />
       <recent name="com.dbkj.meet.dto" />
       <recent name="com.dbkj.meet.utils" />
+      <recent name="com.dbkj.meet.services" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\工作\云会易\MeetSys+计费\MeetSys\src\main\webapp" />
-      <recent name="F:\工作\云会易\MeetSys+计费\MeetSys\src\main\webapp\css\other" />
-      <recent name="F:\工作\云会易\MeetSys+计费\MeetSys\src\main\webapp\pages\other" />
-      <recent name="F:\工作\云会易\MeetSys+计费\MeetSys\src\main\webapp\js" />
-      <recent name="F:\工作\云会易\MeetSys+计费\MeetSys\src\main\webapp\pages\admin" />
+      <recent name="F:\工作\云会易\欣含宇通\MeetSys\src\main\webapp\pages\login" />
+      <recent name="F:\工作\云会易\欣含宇通\MeetSys\src\main\webapp" />
+      <recent name="F:\工作\云会易\欣含宇通\MeetSys\src\main\webapp\pages\mc" />
+      <recent name="F:\工作\云会易\欣含宇通\MeetSys\src\main\webapp\img" />
+      <recent name="F:\工作\云会易\欣含宇通\MeetSys\src\main\webapp\css\login" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8">
+  <component name="RunManager" selected="Tomcat Server.Tomcat">
+    <configuration default="false" name="MailUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.dbkj.meet.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.dbkj.meet.utils.MailUtil" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="src/main/webapp 80 / 5" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="MeetSys" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="GeneratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -475,14 +1029,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="ValidateUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="AESUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.dbkj.meet.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.dbkj.meet.utils.ValidateUtil" />
+      <option name="MAIN_CLASS_NAME" value="com.dbkj.meet.utils.AESUtil" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="src/main/webapp 80 / 5" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -495,34 +1049,14 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="AppConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.dbkj.meet.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.dbkj.meet.config.AppConfig" />
-      <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="src/main/webapp 80 / 5" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="MeetSys" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="RSAUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DateUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.dbkj.meet.utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.dbkj.meet.utils.RSAUtil" />
+      <option name="MAIN_CLASS_NAME" value="com.dbkj.meet.utils.DateUtil" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="src/main/webapp 80 / 5" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -1013,7 +1547,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat 8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.11" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="false" name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.11" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
@@ -1024,13 +1558,13 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_MeetSys_7" />
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_MeetSys_5" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <predefined_log_file id="Tomcat Manager" enabled="true" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="true" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="55162" />
@@ -1083,25 +1617,26 @@
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="MeetSys:war" />
+          <artifact name="MeetSys:war" />
         </option>
       </method>
     </configuration>
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="Application.MeetSys" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GeneratorDemo" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ValidateUtil" />
-      <item index="4" class="java.lang.String" itemvalue="Application.AppConfig" />
-      <item index="5" class="java.lang.String" itemvalue="Application.RSAUtil" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MailUtil" />
+      <item index="3" class="java.lang.String" itemvalue="Application.GeneratorDemo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.AESUtil" />
+      <item index="5" class="java.lang.String" itemvalue="Application.DateUtil" />
       <item index="6" class="java.lang.String" itemvalue="Application.MessageUtil" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.AppConfig" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MessageUtil" />
-        <item index="2" class="java.lang.String" itemvalue="Application.RSAUtil" />
-        <item index="3" class="java.lang.String" itemvalue="Application.GeneratorDemo" />
-        <item index="4" class="java.lang.String" itemvalue="Application.ValidateUtil" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MessageUtil" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GeneratorDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.DateUtil" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MailUtil" />
+        <item index="4" class="java.lang.String" itemvalue="Application.AESUtil" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -1224,19 +1759,79 @@
       <workItem from="1493108440157" duration="1875000" />
       <workItem from="1493113121861" duration="1646000" />
       <workItem from="1493117894779" duration="79000" />
-      <workItem from="1493804237639" duration="8200000" />
-      <workItem from="1493822148628" duration="1573000" />
-      <workItem from="1493869352768" duration="4968000" />
-      <workItem from="1494824914604" duration="855000" />
-      <workItem from="1494826601941" duration="428000" />
-      <workItem from="1494828233512" duration="1607000" />
-      <workItem from="1495422189643" duration="2278000" />
-      <workItem from="1495616522181" duration="400000" />
+      <workItem from="1493256276967" duration="10687000" />
+      <workItem from="1493803291573" duration="944000" />
+      <workItem from="1493870667927" duration="23026000" />
+      <workItem from="1494045437567" duration="118000" />
+      <workItem from="1494770041129" duration="2293000" />
+      <workItem from="1494821766950" duration="3977000" />
+      <workItem from="1494826293930" duration="302000" />
+      <workItem from="1494827031737" duration="3158000" />
+      <workItem from="1494831662819" duration="76000" />
+      <workItem from="1494832009037" duration="758000" />
+      <workItem from="1494924386589" duration="2016000" />
+      <workItem from="1495413761234" duration="19310000" />
+      <workItem from="1495446928805" duration="5930000" />
+      <workItem from="1495505530461" duration="18611000" />
+      <workItem from="1495602786177" duration="5169000" />
+      <workItem from="1495615324885" duration="30000" />
+      <workItem from="1495616316184" duration="139000" />
+      <workItem from="1495673839520" duration="12748000" />
+      <workItem from="1495693016728" duration="1387000" />
+      <workItem from="1495712287275" duration="57000" />
+      <workItem from="1495852769751" duration="2163000" />
+      <workItem from="1496220548903" duration="20556000" />
+      <workItem from="1496383375365" duration="15884000" />
+      <workItem from="1496479440531" duration="13762000" />
+      <workItem from="1496544526046" duration="24594000" />
+      <workItem from="1496624277773" duration="56251000" />
+      <workItem from="1496798117444" duration="32275000" />
+      <workItem from="1496899981894" duration="49912000" />
+      <workItem from="1497138925162" duration="658000" />
+      <workItem from="1497416441391" duration="78000" />
+      <workItem from="1497574535442" duration="2258000" />
+      <workItem from="1497581544414" duration="938000" />
     </task>
+    <task id="LOCAL-00001" summary="登录页面排除获取账户余额信息的过滤器，防止出现错误后无法返回登录页面">
+      <created>1495693189177</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1495693189177</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修预约会议为重复类型的，首次开始时间为当前时间之前的时间时，预约会议会立即开始的bug。">
+      <created>1496366456630</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496366456630</updated>
+    </task>
+    <task id="LOCAL-00003" summary="修复预约会议为无重复类型，预约会议开始时间为过去的时间，定时任务无法创建会议的bug。">
+      <created>1496386556903</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1496386556903</updated>
+    </task>
+    <task id="LOCAL-00004" summary="修复即时会议详情页面的bug">
+      <created>1496817290801</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496817290801</updated>
+    </task>
+    <task id="LOCAL-00005" summary="分页排列序号接上一页">
+      <created>1497575346035</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1497575346035</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1480828000" />
+    <option name="totallyTimeSpent" value="1790584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1263,32 +1858,86 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36197022" sideWeight="0.48056155" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2423556" sideWeight="0.48056155" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3171008" sideWeight="0.46369138" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.48839718" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46277204" sideWeight="0.49217486" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2819932" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22310306" sideWeight="0.49217486" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31939977" sideWeight="0.4675768" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23225807" sideWeight="0.53379154" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26902464" sideWeight="0.4601626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.294086" sideWeight="0.5398374" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29032257" sideWeight="0.5324232" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5188216" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49546143" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31729668" sideWeight="0.46369138" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="92" y="100" width="1725" height="838" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3127148" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31257078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46277204" sideWeight="0.50782514" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.49546143" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973558" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14609286" sideWeight="0.48056155" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3171008" sideWeight="0.46369138" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875144" sideWeight="0.48839718" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="92" y="100" width="1725" height="838" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2344281" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29445073" sideWeight="0.49217486" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23901394" sideWeight="0.4601626" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.294086" sideWeight="0.5398374" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31257078" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25718608" sideWeight="0.5188216" order="7" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1301,15 +1950,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="登录页面排除获取账户余额信息的过滤器，防止出现错误后无法返回登录页面" />
+    <MESSAGE value="修预约会议为重复类型的，首次开始时间为当前时间之前的时间时，预约会议会立即开始的bug。" />
+    <MESSAGE value="修复预约会议为无重复类型，预约会议开始时间为过去的时间，定时任务无法创建会议的bug。" />
+    <MESSAGE value="修复即时会议详情页面的bug" />
+    <MESSAGE value="分页排列序号接上一页" />
+    <option name="LAST_COMMIT_MESSAGE" value="分页排列序号接上一页" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetControlService.java</url>
-          <line>522</line>
-          <properties />
-          <option name="timeStamp" value="284" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/ChangePwdValidator.java</url>
           <line>26</line>
@@ -1323,7 +1975,7 @@
           <option name="timeStamp" value="298" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="301" />
+      <option name="time" value="414" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1332,361 +1984,346 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ValidateUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/mc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/mc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6750">
-          <caret line="270" column="83" lean-forward="true" selection-start-line="270" selection-start-column="83" selection-end-line="270" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PersonalContactsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5050">
-          <caret line="202" column="72" lean-forward="false" selection-start-line="202" selection-start-column="61" selection-end-line="202" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PersonalContactService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14925">
-          <caret line="597" column="51" lean-forward="true" selection-start-line="597" selection-start-column="51" selection-end-line="597" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/CompanyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="42" column="51" lean-forward="true" selection-start-line="42" selection-start-column="51" selection-end-line="42" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="54" column="38" lean-forward="true" selection-start-line="53" selection-start-column="48" selection-end-line="54" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/LoginValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="36" column="40" lean-forward="false" selection-start-line="36" selection-start-column="40" selection-end-line="36" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="51" column="79" lean-forward="false" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1400">
-          <caret line="56" column="55" lean-forward="true" selection-start-line="56" selection-start-column="55" selection-end-line="56" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/other/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/other/error_page.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/other/500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="28" lean-forward="false" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/other/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="15" column="7" lean-forward="false" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/AmountInterceptor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/vo/UserLoginVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state relative-caret-position="242">
+          <caret line="49" column="59" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetControlService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4550">
-          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="24" column="76" lean-forward="false" selection-start-line="24" selection-start-column="76" selection-end-line="24" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        <state relative-caret-position="10350">
+          <caret line="448" column="32" lean-forward="false" selection-start-line="448" selection-start-column="32" selection-end-line="448" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/PersonalContactService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14375">
-          <caret line="597" column="51" lean-forward="false" selection-start-line="597" selection-start-column="51" selection-end-line="597" selection-end-column="51" />
+        <state relative-caret-position="6600">
+          <caret line="289" column="0" lean-forward="false" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/PersonalContactsController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/PrivateContacts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4400">
-          <caret line="202" column="72" lean-forward="false" selection-start-line="202" selection-start-column="61" selection-end-line="202" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/CompanyService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/2.2/jfinal-2.2.jar!/com/jfinal/config/Constants.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="38" column="33" lean-forward="false" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="127" column="52" lean-forward="true" selection-start-line="127" selection-start-column="52" selection-end-line="127" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/admin/charge.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-575">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/common/paginate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="42" column="17" lean-forward="false" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/js/npm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="26" lean-forward="true" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1450">
-          <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/LoginValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="29" column="13" lean-forward="false" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ValidateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
-          <caret line="70" column="42" lean-forward="false" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/validator/UserDataValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="137" column="38" lean-forward="true" selection-start-line="137" selection-start-column="38" selection-end-line="137" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="35" column="48" lean-forward="false" selection-start-line="35" selection-start-column="48" selection-end-line="35" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/sql.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="33" lean-forward="false" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetingRecordService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1219">
-          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MessageServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="128" column="39" lean-forward="true" selection-start-line="128" selection-start-column="39" selection-end-line="128" selection-end-column="39" />
+        <state relative-caret-position="3000">
+          <caret line="137" column="0" lean-forward="false" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mc/meetControl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/mc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="147" column="54" lean-forward="true" selection-start-line="147" selection-start-column="54" selection-end-line="147" selection-end-column="54" />
+        <state relative-caret-position="5125">
+          <caret line="205" column="36" lean-forward="false" selection-start-line="205" selection-start-column="36" selection-end-line="205" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/mc/meetService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="479" column="55" lean-forward="true" selection-start-line="479" selection-start-column="55" selection-end-line="479" selection-end-column="55" />
+        <state relative-caret-position="280">
+          <caret line="1270" column="29" lean-forward="false" selection-start-line="1270" selection-start-column="29" selection-end-line="1270" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/personal/add.html">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="56" column="42" lean-forward="false" selection-start-line="56" selection-start-column="42" selection-end-line="56" selection-end-column="42" />
+        <state relative-caret-position="272">
+          <caret line="62" column="46" lean-forward="true" selection-start-line="62" selection-start-column="46" selection-end-line="62" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/meetlist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2450">
+          <caret line="128" column="30" lean-forward="false" selection-start-line="128" selection-start-column="30" selection-end-line="128" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/vo/SmtpEmailVO.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/dto/OrderModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="229" column="36" lean-forward="false" selection-start-line="229" selection-start-column="36" selection-end-line="229" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/WebUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/interceptors/LoginInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="25" column="14" lean-forward="true" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/order/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="40" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/sql.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="106" column="60" lean-forward="false" selection-start-line="106" selection-start-column="60" selection-end-line="106" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/model/Record.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="36" selection-end-line="41" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/MeetListController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/meetlist/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/order/order.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="572" column="67" lean-forward="true" selection-start-line="572" selection-start-column="67" selection-end-line="572" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MeetListService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1850">
+          <caret line="38" column="55" lean-forward="true" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/SMTPServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/MailUtil.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ValidateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/user/detail.html" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="88" column="80" lean-forward="false" selection-start-line="88" selection-start-column="15" selection-end-line="88" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/user/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="104" column="61" lean-forward="true" selection-start-line="104" selection-start-column="61" selection-end-line="104" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="265" column="30" lean-forward="false" selection-start-line="265" selection-start-column="22" selection-end-line="265" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/ScheduleJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="925">
+          <caret line="55" column="11" lean-forward="false" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/quartz-scheduler/quartz/2.2.3/quartz-2.2.3.jar!/org/quartz/Scheduler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="66" column="9" lean-forward="false" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/ScheduleHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="100" column="25" lean-forward="false" selection-start-line="100" selection-start-column="25" selection-end-line="100" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/2.2/jfinal-2.2.jar!/com/jfinal/plugin/activerecord/DbPro.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="586" column="0" lean-forward="false" selection-start-line="586" selection-start-column="0" selection-end-line="586" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RemindScheduleJob.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="31" selection-end-line="69" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfDayOrderMeet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="35" column="39" lean-forward="false" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfMonthOrderMeet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="32" column="39" lean-forward="false" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/RepeatOfWeekOrderMeet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="33" column="52" lean-forward="true" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/NoRepeateOrderMeet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="50" column="44" lean-forward="false" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/BaseOrderMeetType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3025">
+          <caret line="142" column="27" lean-forward="false" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ordermeet/OrderMeetContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="25" column="64" lean-forward="false" selection-start-line="25" selection-start-column="64" selection-end-line="25" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/utils/MessageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1150">
+          <caret line="53" column="54" lean-forward="false" selection-start-line="53" selection-start-column="54" selection-end-line="53" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="132" column="18" lean-forward="false" selection-start-line="132" selection-start-column="18" selection-end-line="132" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-849">
+          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jfinal/jfinal/2.2/jfinal-2.2.jar!/com/jfinal/plugin/activerecord/Page.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/admin/charge/list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="39" column="80" lean-forward="true" selection-start-line="39" selection-start-column="80" selection-end-line="39" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/ChargeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/ChargeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderRecordServiceImpl.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/OrderMeetService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="184" column="0" lean-forward="false" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+          <folding>
+            <element signature="e#2122#2138#0" expanded="true" />
+            <element signature="e#2955#2969#0" expanded="true" />
+            <element signature="e#3735#3751#0" expanded="true" />
+            <element signature="e#3798#3808#0" expanded="true" />
+            <element signature="e#3862#3872#0" expanded="true" />
+            <element signature="e#4007#4017#0" expanded="true" />
+            <element signature="e#4324#4338#0" expanded="true" />
+            <element signature="e#4739#4753#0" expanded="true" />
+            <element signature="e#5171#5181#0" expanded="true" />
+            <element signature="e#5318#5328#0" expanded="true" />
+            <element signature="e#5652#5666#0" expanded="true" />
+            <element signature="e#6102#6116#0" expanded="true" />
+            <element signature="e#15931#16495#0" expanded="true" />
+            <element signature="e#16494#16495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="38" column="49" lean-forward="false" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/dbkj/meet/services/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1250">
+          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/pages/login/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="30" column="83" lean-forward="true" selection-start-line="30" selection-start-column="83" selection-end-line="30" selection-end-column="83" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1771,6 +2408,17 @@
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
           <last-edited>Maven: cglib:cglib-nodep:3.1</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2045977" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -2,6 +2,7 @@ package com.dbkj.meet.validator;
 
 import com.dbkj.meet.dic.Constant;
 import com.dbkj.meet.dto.UserData;
+import com.dbkj.meet.dto.UserDto;
 import com.dbkj.meet.model.User;
 import com.dbkj.meet.services.UserService;
 import com.dbkj.meet.services.inter.IUserService;
@@ -62,7 +63,7 @@ public class UserDataValidator extends Validator {
             flag=false;
             addError("confirmPwdMsg",res.get("confirmPassword.not.empty"));
         }else {
-            String decryptConfimrPwd= RSAUtil2.decryptBase64(encryptConfimrPwd,privateKey);
+            String decryptConfimrPwd=RSAUtil2.decryptBase64(encryptConfimrPwd,privateKey);
             userData.setConfirmPwd(decryptConfimrPwd);
             if (!decryptConfimrPwd.equals(decryptPwd)) {
                 flag=false;
@@ -81,7 +82,7 @@ public class UserDataValidator extends Validator {
         }
 
         String email=userData.getEmail();
-        if(!StrKit.isBlank(email)&& ValidateUtil.validateEmail(email)){
+        if(!StrKit.isBlank(email)&& !ValidateUtil.validateEmail(email)){
             flag=false;
             addError("emailMsg",res.get("employee.email.format.wrong"));
         }

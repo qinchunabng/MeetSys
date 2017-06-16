@@ -213,6 +213,28 @@ var userAdd={
     }
 };
 
+var updateSelf={
+    //修改
+    update:function (data) {
+        $.ajax({
+            type:"post",
+            url:common.getContextPath()+"/user/updateSelf",
+            dataType:"json",
+            data:data,
+            success:function (result) {
+                common.isLoginTimeout(result);
+                if(result.result){
+                    common.showDialog({content:"修改成功!"});
+                }else{
+                    common.showDialog({content:result.msg||"修改失败！"})
+                }
+            },error:function (e) {
+                console.log(e.responseText);
+            }
+        });
+    }
+}
+
 //密码修改页面
 var changePwdPage={
     showTips:function (dom) {

@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/admin/layout.html">
+<#include "/pages/admin/layout.html">
 <@header title="充值列表" num=3>
     <meta charset="UTF-8">
     <link href="${ctx!}/artDialog/css/ui-dialog.css" rel="stylesheet" type="text/css"/>
@@ -30,12 +30,12 @@
                     </tr>
                 </table>
                 <div id="user-content" class="user-content">
-                    <div id="loadTip" class="loadingStyle" style="display: none;"><img src="/img/loading.gif"></div>
+                    <div id="loadTip" class="loadingStyle" style="display: none;"><img src="${ctx!}/img/loading.gif"></div>
                     <table class="ctable" id="tdata">
                         <#if (pages.list?size>0)>
                             <#list pages.list as item>
                                 <tr>
-                                    <td class="t_index">${item_index+1}</td>
+                                    <td class="t_index">${pages.pageSize*(pages.pageNumber-1)+item_index+1}</td>
                                     <td class="t_cname">${item.name}</td>
                                     <td class="t_balance">￥ ${item.balance}</td>
                                     <td class="t_opara">
@@ -53,14 +53,14 @@
                         </#if>
                     </table>
                 </div>
-                <#include "${ctx!}/pages/common/paginate.html"><@paginate pages></@paginate>
+                <#include "/pages/common/paginate.html"><@paginate pages></@paginate>
             </div>
         </div>
     </div>
 </@header>
 <@footer>
 <script type="text/javascript" src="${ctx!}/artDialog/dist/dialog.js?skin=blue"></script>
-<script type="text/javascript" src="${ctx!}/js/admin/charge.js"></script>
+<script type="text/javascript" src="${ctx!}/js/admin/charge.js"/>
 <script type="text/javascript">
     $(function () {
         //首页
@@ -74,14 +74,14 @@
         $("span.pagination-prev").click(function () {
             var cls = $(this).parents("a.l-btn").attr("class");
             if(cls.indexOf("l-btn-disabled")==-1){//未被禁用
-                charge.page({"companyName":$("#companyName").val(),"pageNum":parseInt($("#currentPage").val())-1});
+                charge.page({"companyName":$("#companyName").val(),"pageNum":parseInt($("#currentIndex").val())-1});
             }
         });
         //下一页
         $("span.pagination-next").click(function () {
             var cls = $(this).parents("a.l-btn").attr("class");
             if(cls.indexOf("l-btn-disabled")==-1){//未被禁用
-                charge.page({"companyName":$("#companyName").val(),"pageNum":parseInt($("#currentPage").val())+1});
+                charge.page({"companyName":$("#companyName").val(),"pageNum":parseInt($("#currentIndex").val())+1});
             }
         });
         //尾页

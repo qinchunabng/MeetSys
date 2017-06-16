@@ -23,7 +23,7 @@
 	<div id="part2" class="part2">
 		<div class="block">
 			<div class="logo">
-				<a href=""><img src="/img/meeting.jpg" alt="网络会议logo" height="100"/></a>
+				<a href=""><img src="${ctx!}/img/meeting.jpg" alt="网络会议logo" height="100"/></a>
 			</div>
 			<#if amount??>
 				<div class="taocan">
@@ -97,16 +97,16 @@
 							<span class="left_text">企业设置</span>
 							<span class="icon business_setting"></span>-->
 						</li>
-						<li class="person_info tab_style">
+						<li class="person_info tab_style" >
 							<span class="left_text">个人信息</span>
 							<span></span>
 						</li>
 						<li id="item_11" class="lefttree_link <#if num==11>current_tab<#else>tab_style</#if>">
-							<span class="left_text">个人设置</span>
+							<span class="left_text">个人资料</span>
 							<span class="icon person_setting"></span>
 						</li>
 						<li id="item_12" class="lefttree_link <#if num==12>current_tab<#else>tab_style</#if>">
-							<span class="left_text">修改密码</span>
+							<span class="left_text">SMTP邮箱</span>
 							<span class="icon change_password"></span>
 						</li>
 					</ul>
@@ -183,13 +183,15 @@
 					    break;
 					case 9:
 					case 10:
+                        common.showDialog({
+                            content:"该功能暂未开启"
+                        });
+					    break;
 					case 11:
-							common.showDialog({
-								content:"该功能暂未开启"
-							});
+						location.href="${ctx!}/user/showSelf"
 						break;
 					case 12:
-							location.href="${ctx!}/user/showChangePwd";
+							location.href="${ctx!}/smtp";
 						break;
 				}
 			});

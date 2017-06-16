@@ -18,8 +18,7 @@ public class UserInterceptor implements Interceptor {
         if(user.getAid()== UserType.ADMIN.getTypeCode()){
             invocation.invoke();
         }else{//如果不是公司管理员，则显示没有权限的页面
-            String contextPath=controller.getRequest().getContextPath();
-            controller.render(contextPath+"/pages/other/noauth.html");
+            controller.render("/pages/other/noauth.html");
         }
     }
 }

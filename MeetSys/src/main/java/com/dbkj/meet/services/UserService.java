@@ -22,7 +22,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.security.Key;
+import java.security.PrivateKey;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -60,7 +62,7 @@ public class UserService implements IUserService {
         Map<String,Object> map=new HashMap<String, Object>();
         User user=controller.getSessionAttr(Constant.USER_KEY);
         //获取公司所有的部门
-        List<Department> departmentList= Department.dao.findByCompanyId(user.getCid());
+        List<Department> departmentList=Department.dao.findByCompanyId(user.getCid());
         map.put("dlist",departmentList);
         //获取用户分页数据
         //查询条件
@@ -89,14 +91,14 @@ public class UserService implements IUserService {
             map.put("search",searchPara[0]);
         }
 
-        Page<Record> page= User.dao.getUserPage(params);
+        Page<Record> page=User.dao.getUserPage(params);
         List<Record> userData=page.getList();
 
         Iterator<Record> itr=userData.iterator();
         while(itr.hasNext()){
             Record record=itr.next();
             try {
-                record.set("password", AESUtil.decrypt(record.getStr("password"), Constant.ENCRYPT_KEY));
+                record.set("password", AESUtil.decrypt(record.getStr("password"),Constant.ENCRYPT_KEY));
             } catch (Exception e) {
                 logger.error(e.getMessage(),e);
             }
@@ -116,12 +118,12 @@ public class UserService implements IUserService {
         return Department.dao.findByCompanyId(cid);
     }
 
-    public boolean addUserData(final UserData userData, final int cid, HttpServletRequest request) {
+    public boolean addUserData(final UserData userData, final int cid,HttpServletRequest request) {
         if(userData!=null){
             final User user=new User();
             user.setUsername(userData.getUsername());
             try {
-                user.setPassword(AESUtil.encrypt(userData.getPassword(), Constant.ENCRYPT_KEY));
+                user.setPassword(AESUtil.encrypt(userData.getPassword(),Constant.ENCRYPT_KEY));
             } catch (Exception e) {
                 logger.error(e.getMessage(),e);
             }
@@ -167,7 +169,7 @@ public class UserService implements IUserService {
      * @return
      */
     public UserData getUserData(long uid) {
-        User user= User.dao.findById(uid);
+        User user=User.dao.findById(uid);
         Employee employee = Employee.dao.findById(user.getEid());
         UserData userData=new UserData();
         if(user!=null){
@@ -175,7 +177,7 @@ public class UserService implements IUserService {
             userData.setUsername(user.getUsername());
             String password=user.getPassword();
             try {
-                password= AESUtil.decrypt(password, Constant.ENCRYPT_KEY);
+                password=AESUtil.decrypt(password,Constant.ENCRYPT_KEY);
             } catch (Exception e) {
                 logger.error(e.getMessage(),e);
             }
@@ -198,22 +200,37 @@ public class UserService implements IUserService {
      * @param userData
      * @return
      */
-    public boolean updateUserData(UserData userData, HttpServletRequest request) {
+    public boolean updateUserData(UserData userData) {
+        return updateUser(userData);
+    }
+
+    /**
+     * 更新用户资料
+     * @param userData
+     * @return
+     */
+    private boolean updateUser(UserData userData){
         if(userData!=null){
-            final User user= User.dao.findById(userData.getId());
-            Map<String,Key> keyMap= (Map<String, Key>) request.getSession().getAttribute(UserService.KEY_MAP);
-            Key privateKey=keyMap.get(RSAUtil2.PRIVATE_KEY);
-            String decryptPwd= RSAUtil2.decryptBase64(userData.getEncryptPwd(),privateKey);
+            final User user=User.dao.findById(userData.getId());
+//            Map<String,Key> keyMap= (Map<String, Key>) request.getSession().getAttribute(UserService.KEY_MAP);
+//            Key privateKey=keyMap.get(RSAUtil2.PRIVATE_KEY);
+//            String decryptPwd=RSAUtil2.decryptBase64(userData.getEncryptPwd(),privateKey);
             try {
-                user.setPassword(AESUtil.encrypt(decryptPwd, Constant.ENCRYPT_KEY));
+                user.setPassword(AESUtil.encrypt(userData.getPassword(),Constant.ENCRYPT_KEY));
             } catch (Exception e) {
                 logger.error(e.getMessage(),e);
             }
-            final Employee employee= Employee.dao.findById(user.getEid());
-            employee.setName(userData.getName());
-            employee.setDid(userData.getDid());
+            final Employee employee=Employee.dao.findById(user.getEid());
             employee.setEmail(userData.getEmail());
-            employee.setPosition(userData.getPosition());
+            if(userData.getName()!=null){
+                employee.setName(userData.getName());
+            }
+            if(userData.getDid()!=null){
+                employee.setDid(userData.getDid());
+            }
+            if(userData.getPosition()!=null){
+                employee.setPosition(userData.getPosition());
+            }
             return Db.tx(new IAtom() {
                 public boolean run() throws SQLException {
                     if(user.update()){
@@ -224,6 +241,84 @@ public class UserService implements IUserService {
             });
         }
         return false;
+    }
+
+    /**
+     * 修改个人资料
+     * @param userData
+     * @return
+     */
+    @Override
+    public Result<?> updateSelf(UserData userData, HttpServletRequest request) {
+        Result result=validateUserData(userData,request);
+        if(!result.getResult()){
+            return result;
+        }
+        result.setResult(updateUser(userData));
+        return result;
+    }
+
+    /**
+     * 验证
+     * @param userData
+     * @return
+     */
+    private Result<?> validateUserData(UserData userData,HttpServletRequest request){
+        Result result=new Result(false);
+
+        Res res = I18n.use("zh_CN");
+        Map<String,Key> keyMap= (Map<String, Key>) request.getSession().getAttribute(UserService.KEY_MAP);
+        Key privateKey=keyMap.get(RSAUtil2.PRIVATE_KEY);
+
+        String encryptPwd=userData.getEncryptPwd();
+        String decryptPwd=null;
+        if(StrKit.isBlank(encryptPwd)){
+            result.setMsg(res.get("newPassword.not.empty"));
+            return result;
+        }else {
+            decryptPwd= RSAUtil2.decryptBase64(encryptPwd,privateKey);
+            userData.setPassword(decryptPwd);
+            if (decryptPwd.length() < 6 || decryptPwd.length() > 16) {
+                result.setMsg(res.get("password.length"));
+                return result;
+            }
+        }
+        String encryptConfimrPwd=userData.getEncryptConfirmPwd();
+        if(StrKit.isBlank(encryptConfimrPwd)){
+            result.setMsg(res.get("confirmPassword.not.empty"));
+            return result;
+        }else {
+            String decryptConfimrPwd=RSAUtil2.decryptBase64(encryptConfimrPwd,privateKey);
+            userData.setConfirmPwd(decryptConfimrPwd);
+            if (!decryptConfimrPwd.equals(decryptPwd)) {
+                result.setMsg(res.get("confirmPassword.not.equal"));
+                return result;
+            }
+        }
+        //如果当前用户是管理员，则验证姓名和部门
+        UserType userType=UserType.valueOf(User.dao.findById(userData.getId()).getAid());
+        if(UserType.ADMIN.equals(userType)){
+            String name=userData.getName();
+            if(StrKit.isBlank(name)){
+                result.setMsg(res.get("employee.name.not.empty"));
+               return result;
+            }
+
+            if(userData.getDid()==null){
+                result.setMsg(res.get("employee.department.id.not.select"));
+                return result;
+            }
+
+        }
+
+        String email=userData.getEmail();
+        if(!StrKit.isBlank(email)&& !ValidateUtil.validateEmail(email)){
+            result.setMsg(res.get("employee.email.format.wrong"));
+            return result;
+        }
+
+        result.setResult(true);
+        return result;
     }
 
     public boolean deleteUsers(String idStr) {
@@ -237,7 +332,7 @@ public class UserService implements IUserService {
         return Db.tx(new IAtom() {
             public boolean run() throws SQLException {
                 //注意删除先后顺序，顺序颠倒将会导致删除失败
-                int count= Employee.dao.deleteBatchByUserId(ids);
+                int count=Employee.dao.deleteBatchByUserId(ids);
                 if(count==ids.length){
                     return User.dao.deleteBatch(ids)==ids.length;
                 }
@@ -246,7 +341,7 @@ public class UserService implements IUserService {
         });
     }
 
-    public Result<?> changePwd(ChangePwd changePwd, String username, HttpServletRequest request) {
+    public Result<?> changePwd(ChangePwd changePwd,String username,HttpServletRequest request) {
         Result result=null;
         try {
             Map<String,Key> keyMap= (Map<String, Key>) request.getSession().getAttribute(UserService.KEY_MAP);
@@ -257,8 +352,8 @@ public class UserService implements IUserService {
 //                String oldPwd=RSAUtil2.decryptBase64(changePwd.getOldPassword(),privateKey);
 //                String newPwd=RSAUtil2.decryptBase64(changePwd.getNewPassword(),privateKey);
 
-                User user= User.dao.findUser(username, AESUtil.encrypt(changePwd.getOldPassword(), Constant.ENCRYPT_KEY));
-                user.setPassword(AESUtil.encrypt(changePwd.getNewPassword(), Constant.ENCRYPT_KEY));
+                User user=User.dao.findUser(username,AESUtil.encrypt(changePwd.getOldPassword(),Constant.ENCRYPT_KEY));
+                user.setPassword(AESUtil.encrypt(changePwd.getNewPassword(),Constant.ENCRYPT_KEY));
                 boolean flag = user.update();
                 result.setResult(flag);
             }
@@ -269,7 +364,7 @@ public class UserService implements IUserService {
         return result;
     }
 
-    private Result<?> validateChangePwd(ChangePwd changePwd, String username, Key privateKey) throws Exception {
+    private Result<?> validateChangePwd(ChangePwd changePwd,String username,Key privateKey) throws Exception {
         Result<Object> result=new Result<Object>(true);
         if(changePwd!=null){
             Res res= I18n.use("zh_CN");
@@ -279,9 +374,9 @@ public class UserService implements IUserService {
                 result.setMsg(res.get("oldPassword.not.empty"));
                 return result;
             }else {
-                oldPwd= RSAUtil2.decryptBase64(oldPwd,privateKey);
+                oldPwd=RSAUtil2.decryptBase64(oldPwd,privateKey);
                 changePwd.setOldPassword(oldPwd);
-                if(User.dao.findUser(username, AESUtil.encrypt(oldPwd, Constant.ENCRYPT_KEY))==null){
+                if(User.dao.findUser(username,AESUtil.encrypt(oldPwd, Constant.ENCRYPT_KEY))==null){
                     result.setResult(false);
                     result.setMsg(res.get("oldPassword.not.correct"));
                     return result;
@@ -294,7 +389,7 @@ public class UserService implements IUserService {
                 result.setMsg(res.get("newPassword.not.empty"));
                 return result;
             }else{
-                newPwd= RSAUtil2.decryptBase64(newPwd,privateKey);
+                newPwd=RSAUtil2.decryptBase64(newPwd,privateKey);
                 changePwd.setNewPassword(newPwd);
             }
 
@@ -304,7 +399,7 @@ public class UserService implements IUserService {
                 result.setMsg(res.get("confirmPassword.not.empty"));
                 return result;
             }else{
-                confirmPwd= RSAUtil2.decryptBase64(confirmPwd,privateKey);
+                confirmPwd=RSAUtil2.decryptBase64(confirmPwd,privateKey);
                 changePwd.setConfirmPassword(confirmPwd);
                 if(!confirmPwd.equals(newPwd)) {
                     result.setResult(false);
@@ -321,6 +416,6 @@ public class UserService implements IUserService {
     public void setPageData(HttpServletRequest request) {
         Map<String,Key> keyMap = RSAUtil2.generateKeys();
         request.getSession().setAttribute(UserService.KEY_MAP,keyMap);
-        request.setAttribute("publicKey", RSAUtil2.getPublicKey(keyMap));
+        request.setAttribute("publicKey",RSAUtil2.getPublicKey(keyMap));
     }
 }

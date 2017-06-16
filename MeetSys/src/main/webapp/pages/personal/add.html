@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "个人通信录" 4>
     <meta charset="UTF-8">
     <link href="${ctx!}/css/addcontact.css" rel="stylesheet" type="text/css"/>
@@ -50,11 +50,12 @@
                                 <select name="contact.groupId" id="c_groupId" class="text">
                                     <option value="0">--请选择--</option>
                                     <#list glist as item>
-                                        <option value="${item.id}" <#if (contact??&&contact.groupId??&&contact.groupId==item.id)>selected="selected"</#if>>${item.name}</option>
+                                        <option value="${item.id}" <#if (contact.groupId)??&&contact.groupId==item.id>selected="selected"</#if>>${item.name}</option>
                                     </#list>
                                     <#if (contact.groupId)??&&contact.groupId==0>
                                         <option value="0" selected="selected">未分组</option>
                                     </#if>
+
                                 </select>
                                 <span class="new_group" id="groupshowId">新建联系人组</span>
                                 <div id="c_group_Id" class="null"></div>

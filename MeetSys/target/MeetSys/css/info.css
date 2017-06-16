@@ -1,7 +1,7 @@
 .personmgr {width: 100%;}
-.personmgr .block_h1_top {background: url("/img/bg_top.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);float: left;height: 10px;width: 800px;}
-.personmgr .block_h1_bottom {background: url("/img/b6.gif") no-repeat scroll 10px 0 rgba(0, 0, 0, 0);float: left;width: 747px;margin-top: -2px;padding: 5px 5px 5px 45px;border: 1px solid #D5D5D5;border-top: none;font-size: 14px;font-weight: bold;}
-.personmgr .block_h1_pass {background: url("/img/b3.gif") no-repeat scroll 10px 0 rgba(0, 0, 0, 0);}
+.personmgr .block_h1_top {background: url("../img/bg_top.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);float: left;height: 10px;width: 800px;}
+.personmgr .block_h1_bottom {background: url("../img/b6.gif") no-repeat scroll 10px 0 rgba(0, 0, 0, 0);float: left;width: 747px;margin-top: -2px;padding: 5px 5px 5px 45px;border: 1px solid #D5D5D5;border-top: none;font-size: 14px;font-weight: bold;}
+.personmgr .block_h1_pass {background: url("../img/b3.gif") no-repeat scroll 10px 0 rgba(0, 0, 0, 0);}
 .personmgr .block_h1_content {float: left;width: 797px;height: 380px;border: 1px solid #D5D5D5;border-top: none;}
 .personmgr .person-style {margin: 0 auto;position: relative;width: 600px;}
 .personmgr .formClass .main_form {width: 100%;padding-bottom: 10px;}
@@ -21,7 +21,7 @@ label {vertical-align: middle;}
 .personmgr .formClass .null, .error {font-size: 12px;color: #F00;line-height: 22px;}
 .personmgr .formClass .main_form .null, .error {font-size: 12px;color: #F00;line-height: 22px;}
 .personmgr .formClass .blank {height: 16px;margin: 2px 5px 0;width: 16px;}
-.btn_sytle {background: url("/img/bgImg.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);border-radius: 5px;border: 0 none;color: #FFF;cursor: pointer;display: inline-block;
+.btn_sytle {background: url("../img/bgImg.gif") repeat-x scroll 0 0 rgba(0, 0, 0, 0);border-radius: 5px;border: 0 none;color: #FFF;cursor: pointer;display: inline-block;
     /* font-family: 'mirc','楷体','标楷体'; */
     font-size: 14px;
     font-weight: bold;

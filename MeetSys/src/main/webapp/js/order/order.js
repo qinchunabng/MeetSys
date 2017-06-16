@@ -27,7 +27,7 @@ var order={
                 $("#timeRange").hide();
                 $("tr.invitTr").show();
                 $("#startTimeTr").show();
-                $("#meetPwd").hide();
+                // $("#meetPwd").hide();
                 break;
             case "1":
                 $("#startTime").hide();
@@ -36,7 +36,7 @@ var order={
                 $("#timeRange").show();
                 $("tr.invitTr").show();
                 $("#startTimeTr").show();
-                $("#meetPwd").hide();
+                // $("#meetPwd").hide();
                 break;
             case "2":
                 $("#startTime").hide();
@@ -45,7 +45,7 @@ var order={
                 $("#timeRange").show();
                 $("tr.invitTr").show();
                 $("#startTimeTr").show();
-                $("#meetPwd").hide();
+                // $("#meetPwd").hide();
                 break;
             case "3":
                 $("#startTime").hide();
@@ -54,12 +54,12 @@ var order={
                 $("#timeRange").show();
                 $("tr.invitTr").show();
                 $("#startTimeTr").show();
-                $("#meetPwd").hide();
+                // $("#meetPwd").hide();
                 break;
             case "4":
                 $("tr.invitTr").hide();
                 $("#startTimeTr").hide();
-                $("#meetPwd").show();
+                // $("#meetPwd").show();
                 break;
         }
     },
@@ -157,10 +157,10 @@ var order={
            for(var i=0,length=inviteArr.length;i<length;i++){
                if(inviteArr[i].phone==phone){
                    inviteArr.remove(inviteArr[i]);
-                   order.setValue(order.INVITOR,inviteArr);
                     break;
                }
            }
+           order.setValue(order.INVITOR,inviteArr);
             $tr.remove();
         }
     },
@@ -193,6 +193,9 @@ var order={
             var invited=order.getValue(order.INVITOR)||[];
             invited.push(obj);
             order.setValue(order.INVITOR,invited);
+            //清空
+            $("#addInvName").val("");
+            $("#addInvTel").val("");
         }
     },
     //获取邀请人树形菜单对象
@@ -438,6 +441,9 @@ var order={
                     obj["order.contacts"]=JSON.stringify(contacts);
                 }
             }
+            //主持人密码
+            var hostPwd=$("#hostPwd").val();
+            obj["order.hostPwd"]=hostPwd;
             switch(cycleType){
                 case "0":
                     obj["order.startTime"]=$("#startTime").val();
@@ -510,9 +516,7 @@ var order={
                     setContacts();
                     break;
                 case "4":
-                    var hostPwd=$("#hostPwd").val();
                     var listenerPwd=$("#listenerPwd").val();
-                    obj["order.hostPwd"]=hostPwd;
                     obj["order.listenerPwd"]=listenerPwd;
                     break;
             }
@@ -533,7 +537,10 @@ var order={
                     obj["order.smsRemindTime"]=$("#smsRemindTime").val();
                 }
                 obj["order.smsNotice"]=$("#smsNotice").get(0).checked;
+                obj["order.emailNotice"]=$("#emailNotice").get(0).checked;
                 obj["order.containHost"]=$("#containHost").get(0).checked;
+                var $isCallInitDom=$("#isCallInitiative");
+                obj["order.callInitiative"]=$isCallInitDom.get(0)?$isCallInitDom.get(0).checked:true;
                 return {result:true,data:obj};
             }
             return {result:false};
@@ -543,27 +550,38 @@ var order={
             $("span.wrong").attr("class","wrong hide");
             var result=order.addOrderMeet.validate();
             if(result.result){//添加成功
-                $("#loading").show();
-                $.ajax({
-                    type:"post",
-                    url:common.getContextPath()+"/ordermeet/create",
-                    dataType:"json",
-                    data:result.data,
-                    success:function (data) {
-                        if(data.result){//添加成功
-                            order.toast("添加成功","div.block_h1_content");
-                        }else{
-                            if(data.result===false){//添加失败
-                                order.toast(data.msg||"操作失败","div.block_h1_content");
-                            }else{//登陆过期
-                                location.href=order.getContextPath()+"/login";
-                            }
-                        }
-                    },complete:function () {
-                        $("#loading").hide();
-                    }
-                });
+                //判断是否添加会议邀请人
+                if(!result.data["order.contacts"]||order.getValue(order.INVITOR).length==0){
+                    common.showDialog({content:"没有添加会议邀请人，是否继续？",ok:function () {
+                        add(result.data);
+                    }});
+                }else{
+                    add(result.data);
+                }
 
+                function add(dataObj) {
+                    $("#loading").show();
+                    $.ajax({
+                        type:"post",
+                        url:common.getContextPath()+"/ordermeet/create",
+                        dataType:"json",
+                        data:dataObj,
+                        success:function (data) {
+                            // common.isLoginTimeout(data);
+                            if(data.result){//添加成功
+                                // order.toast("添加成功","div.block_h1_content");
+                                common.showTips({content:"添加成功！"});
+                            }else{
+                                if(data.result===false){//添加失败
+                                    // order.toast(data.msg||"操作失败","div.block_h1_content");
+                                    common.showTips({content:data.msg||"操作失败！"});
+                                }
+                            }
+                        },complete:function () {
+                            $("#loading").hide();
+                        }
+                    });
+                }
             }
         }
     },

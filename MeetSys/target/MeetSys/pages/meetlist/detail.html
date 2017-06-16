@@ -1,7 +1,7 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "会议列表">
     <meta charset="UTF-8">
-    <link href="/css/meeting-detail.css" rel="stylesheet" type="text/css"/>
+    <link href="${ctx!}/css/meeting-detail.css" rel="stylesheet" type="text/css"/>
     <div class="conference">
         <div class="block_h1_top"></div>
         <div class="block_h1_bottom">会议信息</div>
@@ -23,28 +23,28 @@
                             <div><#if mtype==1>即时会议<#elseif mtype==2>预约会议<#else>固定会议</#if></div>
                         </li>
                     </ul>
-                    <!-- 会议为固定会议时显示 -->
-                    <#if mtype==3>
-                        <ul class="itemdiv">
-                            <li class="wth"><div>呼入号码：</div></li>
-                            <li class="wtd"><div>${record.callNum}</div></li>
-                        </ul>
-                        <ul class="itemdiv">
-                            <li class="wth"><div>呼出号码：</div></li>
-                            <li class="wtd"><div>${record.showNum}</div></li>
-                        </ul>
-                    </#if>
-                    <!-- 会议为即时会议或者固定会议时显示 -->
-                    <#if mtype==1||mtype==3>
-                        <ul class="itemdiv">
-                            <li class="wth"><div>会议密码：</div></li>
-                            <li class="wtd"><div>${record.hostPwd}</div></li>
-                        </ul>
-                        <!-- <ul class="itemdiv">
-                            <li class="wth"><div>听众密码：</div></li>
-                            <li class="wtd"><div></div></li>
-                        </ul> -->
-                    </#if>
+
+
+                    <ul class="itemdiv">
+                        <li class="wth"><div>呼入号码：</div></li>
+                        <li class="wtd"><div>${record.callNum!}</div></li>
+                    </ul>
+                    <ul class="itemdiv">
+                        <li class="wth"><div>呼出号码：</div></li>
+                        <li class="wtd"><div>${record.showNum!}</div></li>
+                    </ul>
+
+
+
+                    <ul class="itemdiv">
+                        <li class="wth"><div>会议密码：</div></li>
+                        <li class="wtd"><div>${record.hostPwd!}</div></li>
+                    </ul>
+                    <!-- <ul class="itemdiv">
+                           <li class="wth"><div>听众密码：</div></li>
+                           <li class="wtd"><div></div></li>
+                    </ul> -->
+
                     <ul class="itemdiv">
                         <li class="wth"><div>是否录音：</div></li>
                         <li class="wtd"><div><#if record.isRecord==1>是<#else>否</#if></div></li>
@@ -53,7 +53,19 @@
                     <#if mtype!=3>
                         <ul class="itemdiv">
                             <li class="wth"><div>会议开始时间：</div></li>
-                            <li class="wtd"><div><#if mtype==1>${record.startTime}<#else>${record.time}</#if></div></li>
+                            <li class="wtd">
+                                <div>
+                                    <#if mtype==1>
+                                        <#if record.startTime??>
+                                            ${record.startTime}
+                                        <#else>
+                                            会议未召开
+                                        </#if>
+                                    <#else>
+                                        ${record.time}
+                                    </#if>
+                                </div>
+                            </li>
                         </ul>
                     </#if>
                     <#if alist??>

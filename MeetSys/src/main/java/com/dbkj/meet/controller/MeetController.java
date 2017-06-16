@@ -1,9 +1,11 @@
 package com.dbkj.meet.controller;
 
+import com.dbkj.meet.controller.base.BaseController;
 import com.dbkj.meet.dic.Constant;
 import com.dbkj.meet.dto.BaseContact;
 import com.dbkj.meet.dto.Result;
 import com.dbkj.meet.interceptors.BalanceInterceptor;
+import com.dbkj.meet.interceptors.BusinessInterceptor;
 import com.dbkj.meet.interceptors.InfoInterceptor;
 import com.dbkj.meet.interceptors.LoginInterceptor;
 import com.dbkj.meet.model.Record;
@@ -20,7 +22,7 @@ import java.util.Map;
 /**
  * Created by MrQin on 2016/11/17.
  */
-public class MeetController extends Controller {
+public class MeetController extends BaseController {
 
     private final IMeetControlService meetControlService=enhance(MeetControlService.class);
 
@@ -53,8 +55,7 @@ public class MeetController extends Controller {
     public void restart(){//会议重新开始
         long id=getParaToLong();
         Map<String,Object> map=meetControlService.getMeetRestartData(id,getUser());
-        String contextPath=getRequest().getContextPath();
-        redirect(contextPath.concat("/meet/"+((Record)map.get("record")).getId()));
+        redirect("/meet/"+((Record)map.get("record")).getId());
     }
 
     public void addInvite(){//添加会议邀请人
@@ -105,14 +106,14 @@ public class MeetController extends Controller {
     }
 
     @ActionKey("/phonemeeting/stopMeet")
-    @Clear({LoginInterceptor.class, InfoInterceptor.class})
+    @Clear({LoginInterceptor.class, InfoInterceptor.class,BusinessInterceptor.class})
     public void stopMeet(){//接收通话上报接口发送过来的消息
         meetControlService.updateAfterMeetStop(getRequest());
         renderNull();
     }
 
     @ActionKey("/phonemeeting/getStatus")
-    @Clear({LoginInterceptor.class,InfoInterceptor.class})
+    @Clear({LoginInterceptor.class,InfoInterceptor.class, BusinessInterceptor.class})
     public void getStatus(){//接收会议、用户状态变更时推送过来的消息
         meetControlService.getStatus(getRequest());
         renderNull();
@@ -122,8 +123,7 @@ public class MeetController extends Controller {
     public void createFixedMeet(){//创建固定会议
         Long id=getParaToLong();
         Map<String,Object> map = meetControlService.createFixedMeet(id,getUser());
-        String contextPath=getRequest().getContextPath();
-        redirect(contextPath.concat("/meet/"+((Record)map.get("record")).getId()));
+        redirect("/meet/"+((Record)map.get("record")).getId());
     }
 
     public void setHost(){//设置为的第二主持人

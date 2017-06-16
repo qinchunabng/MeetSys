@@ -1,5 +1,6 @@
 package com.dbkj.meet.controller;
 
+import com.dbkj.meet.controller.base.BaseController;
 import com.dbkj.meet.dic.Constant;
 import com.dbkj.meet.dto.BaseNode;
 import com.dbkj.meet.dto.ContactInfo;
@@ -8,9 +9,9 @@ import com.dbkj.meet.model.Group;
 import com.dbkj.meet.model.User;
 import com.dbkj.meet.services.PersonalContactService;
 import com.dbkj.meet.services.inter.IPersonalContactsService;
-import com.dbkj.meet.services.proxy.ClearCacheProxy;
 import com.dbkj.meet.validator.ContactInfoValidator;
 import com.jfinal.aop.Before;
+import com.jfinal.aop.Enhancer;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.interceptor.POST;
 import com.jfinal.kit.StrKit;
@@ -26,11 +27,11 @@ import java.util.Map;
  * 个人通讯录
  * Created by MrQin on 2016/11/17.
  */
-public class PersonalContactsController extends Controller {
+public class PersonalContactsController extends BaseController {
 
     private final Logger logger= LoggerFactory.getLogger(this.getClass());
     //使用代理类来清除缓存
-    private final IPersonalContactsService personalContactService= (IPersonalContactsService) new ClearCacheProxy().bind(new PersonalContactService());
+    private final IPersonalContactsService personalContactService= Enhancer.enhance(PersonalContactService.class);
 
     private User user;
 
@@ -74,8 +75,7 @@ public class PersonalContactsController extends Controller {
     public void deleteGroup(){
         Long gid=getParaToLong();
         personalContactService.deleteGroup(gid);
-        String contextPath=getRequest().getContextPath();
-        redirect(contextPath+"/personalcontacts");
+        redirect("/personalcontacts");
     }
 
     public void showAddContact(){
@@ -98,9 +98,8 @@ public class PersonalContactsController extends Controller {
         User user=getUser();
         contactInfo.setUid(user.getId());
         personalContactService.addContact(contactInfo);
-        String contextPath=getRequest().getContextPath();
         String queryString=getPara("queryString");
-        redirect(contextPath.concat(path).concat(queryString));
+        redirect(path.concat(queryString));
     }
 
     @Before({POST.class,ContactInfoValidator.class})
@@ -135,9 +134,8 @@ public class PersonalContactsController extends Controller {
     public void deleteContacts(){
         String ids=getPara("ids");
         String queryString=getRequest().getQueryString();
-        String contextPath=getRequest().getContextPath();
-        personalContactService.deleteContacts(ids);
-        redirect(contextPath+"/personalcontacts/page"+queryString);
+        personalContactService.deleteContacts(getUser().getId(),ids);
+        redirect("/personalcontacts/page"+queryString);
     }
 
     public void editContact(){
@@ -158,9 +156,8 @@ public class PersonalContactsController extends Controller {
     public void updateContact(){
         ContactInfo contactInfo=getBean(ContactInfo.class,"contact");
         personalContactService.updateContactInfo(contactInfo);
-        String contextPath=getRequest().getContextPath();
         String queryString=getPara("queryString");
-        redirect(contextPath.concat("/personalcontacts/page").concat(queryString));
+        redirect("/personalcontacts/page".concat(queryString));
     }
 
     public void showImport(){

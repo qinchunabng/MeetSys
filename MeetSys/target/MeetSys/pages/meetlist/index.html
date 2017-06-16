@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/common/layout.html">
+<#include "/pages/common/layout.html">
 <@header "会议列表">
     <meta charset="utf-8">
     <link href="${ctx!}/css/meetlist.css" type="text/css" rel="stylesheet"/>
@@ -10,7 +10,7 @@
         <table style="width: 100%;">
             <tr class="tb-todaymeeting">
                 <td colspan="5" class="title hand">
-                    &nbsp;&nbsp;<img src="/img/minus.gif" id="startingImg"/>&nbsp;&nbsp;
+                    &nbsp;&nbsp;<img src="${ctx!}/img/minus.gif" id="startingImg"/>&nbsp;&nbsp;
                     正在进行中
                     <!-- <img alt="" src="/img/refresh.png" class="refresh" onclick="refresh(event)"/> -->
                 </td>
@@ -29,7 +29,7 @@
                             <#if inmeet??&&(inmeet?size>0)>
                                 <#list inmeet as item>
                                     <tr>
-                                        <td>${item.createTime}</td>
+                                        <td>${(item.createTime)!}</td>
                                         <td><a href="javascript:;" class="detail" title="${item.subject}" >${item.subject}</a></td>
                                         <td class="twidth">${item.hostName}</td>
                                         <td>
@@ -50,7 +50,7 @@
             </tr>
             <tr class="tb-todaymeeting">
                 <td colspan="6" class="title hand">
-                    &nbsp;&nbsp;<img src="/img/minus.gif" id="noStartImg"/>&nbsp;&nbsp;
+                    &nbsp;&nbsp;<img src="${ctx!}/img/minus.gif" id="noStartImg"/>&nbsp;&nbsp;
                     未开始
                 </td>
             </tr>

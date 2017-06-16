@@ -41,6 +41,7 @@ public class _MappingKit {
 		arp.addMapping("record", "id", Record.class);
 		arp.addMapping("schedule", "id", Schedule.class);
 		arp.addMapping("sms", "id", Sms.class);
+		arp.addMapping("smtp_email", "id", SmtpEmail.class);
 		arp.addMapping("user", "id", User.class);
 	}
 }

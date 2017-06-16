@@ -9,6 +9,7 @@ public class UserLoginVo extends BaseUser{
 
     private String encryptPwd;
     private String authCode;
+    private String remember;
 
     public String getEncryptPwd() {
         return encryptPwd;
@@ -24,5 +25,13 @@ public class UserLoginVo extends BaseUser{
 
     public void setAuthCode(String authCode) {
         this.authCode = authCode;
+    }
+
+    public String getRemember() {
+        return remember;
+    }
+
+    public void setRemember(String remember) {
+        this.remember = remember;
     }
 }

@@ -1,4 +1,4 @@
-<#include "${ctx!}/pages/admin/layout.html">
+<#include "/pages/admin/layout.html">
 <@header>
     <meta charset="UTF-8">
     <link href="${ctx!}/artDialog/css/ui-dialog.css" rel="stylesheet" type="text/css"/>
@@ -53,7 +53,7 @@
                     </tr>
                 </table>
                 <div id="user-content" class="user-content">
-                    <div id="loadTip" class="loadingStyle" style="display: none;"><img src="/img/loading.gif"></div>
+                    <div id="loadTip" class="loadingStyle" style="display: none;"><img src="${ctx!}/img/loading.gif"></div>
                     <table class="ctable" id="tdata">
                         <#if (pages.list?size>0)>
                             <#list pages.list as item>
@@ -175,7 +175,7 @@
             
             //添加账号
             $("#addBtn").click(function () {
-                location.href="/admin/showAdd"+admin.getQueryStr();
+                location.href="${ctx!}/admin/showAdd"+admin.getQueryStr();
             });
             //首页
             $("span.pagination-first").click(function () {

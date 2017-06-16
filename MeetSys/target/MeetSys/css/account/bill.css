@@ -2,13 +2,13 @@
     width: 100%;
 }
 .bill .block_h1_top {
-    background: url(/img/bg_top.gif) no-repeat scroll 0 0 transparent;
+    background: url(../../img/bg_top.gif) no-repeat scroll 0 0 transparent;
     float: left;
     height: 10px;
     width: 800px;
 }
 .bill .block_h1_bottom {
-    background: url(/img/b5.gif) no-repeat scroll 10px 0 transparent;
+    background: url(../../img/b5.gif) no-repeat scroll 10px 0 transparent;
     float: left;
     width: 747px;
     margin-top: -2px;
@@ -22,7 +22,7 @@
     margin: 5px 0 15px 10px;
 }
 .btn_sytle {
-    background: url(/img/bgImg.gif) repeat-x scroll 0 0 transparent;
+    background: url(../../img/bgImg.gif) repeat-x scroll 0 0 transparent;
     border-radius: 5px;
     border: 0 none;
     color: #FFFFFF;

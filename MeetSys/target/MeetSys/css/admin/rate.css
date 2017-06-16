@@ -13,7 +13,7 @@ a {
     float: left;
     width: 100%;
     height: 8px;
-    background: url(/img/bg_top.gif) 0px 0px no-repeat scroll transparent;
+    background: url(../../img/bg_top.gif) 0px 0px no-repeat scroll transparent;
 }
 .usermgr .block_h1_bottom {
     float: left;
@@ -48,7 +48,7 @@ a {
 table.rtable{width:80%;margin: 70px auto;}
 table.rtable tr,td,th{border: 1px solid lightgray;text-align: center;}
 table.rtable td{padding:5px 0;}
-table.rtable th{height: 25px; background: url(/img/ui-bg_glass_85_dfeffc_1x400.png) repeat-x scroll 50% 50% #DFEFFC;  color: #2E6E9E;}
+table.rtable th{height: 25px; background: url(../../img/ui-bg_glass_85_dfeffc_1x400.png) repeat-x scroll 50% 50% #DFEFFC;  color: #2E6E9E;}
 .usermgr table{width: 737px; border-collapse: collapse; margin: 50px 30px;}
 .usermgr table>thead>tr>th{background-color: #d7ebfd;border:1px solid #DEDEDE;text-align: center;
     height: 25px;

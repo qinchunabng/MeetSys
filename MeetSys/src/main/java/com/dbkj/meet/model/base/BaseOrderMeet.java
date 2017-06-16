@@ -49,6 +49,14 @@ public abstract class BaseOrderMeet<M extends BaseOrderMeet<M>> extends Model<M>
 		return get("hostNum");
 	}
 
+	public void setHostPwd(java.lang.String hostPwd) {
+		set("hostPwd", hostPwd);
+	}
+
+	public java.lang.String getHostPwd() {
+		return get("hostPwd");
+	}
+
 	public void setIsRecord(java.lang.Integer isRecord) {
 		set("isRecord", isRecord);
 	}
@@ -73,12 +81,36 @@ public abstract class BaseOrderMeet<M extends BaseOrderMeet<M>> extends Model<M>
 		return get("sms_remind");
 	}
 
-	public void setCreated(java.util.Date created) {
-		set("created", created);
+	public void setIsCallInitiative(java.lang.Integer isCallInitiative) {
+		set("is_call_initiative", isCallInitiative);
 	}
 
-	public java.util.Date getCreated() {
-		return get("created");
+	public java.lang.Integer getIsCallInitiative() {
+		return get("is_call_initiative");
+	}
+
+	public void setRid(java.lang.Integer rid) {
+		set("rid", rid);
+	}
+
+	public java.lang.Integer getRid() {
+		return get("rid");
+	}
+
+	public void setGmtCreated(java.util.Date gmtCreated) {
+		set("gmt_created", gmtCreated);
+	}
+
+	public java.util.Date getGmtCreated() {
+		return get("gmt_created");
+	}
+
+	public void setGmtModified(java.util.Date gmtModified) {
+		set("gmt_modified", gmtModified);
+	}
+
+	public java.util.Date getGmtModified() {
+		return get("gmt_modified");
 	}
 
 }
