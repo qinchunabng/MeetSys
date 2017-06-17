@@ -10,6 +10,7 @@
 		<div class="login-panel">
 				<form action="${ctx!}/dologin" method="post" id="loginForm" class="">
 				   <h2>登陆网站</h2>
+					<input type="hidden" name="key" value="${key!}">
 				   <input type="hidden" name="showAuthCode" id="showAuthCode" value="false"/>
 					<input type="hidden" value="${publicKey!}" id="publicKey" name="publicKey">
 				   <p class="clearfix">
