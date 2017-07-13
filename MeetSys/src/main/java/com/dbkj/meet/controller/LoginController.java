@@ -11,8 +11,6 @@ import com.dbkj.meet.services.LoginService;
 import com.dbkj.meet.services.RSAKeyServiceImpl;
 import com.dbkj.meet.services.inter.ILoginService;
 import com.dbkj.meet.services.inter.RSAKeyService;
-import com.dbkj.meet.utils.RSAUtil;
-import com.dbkj.meet.utils.RSAUtil2;
 import com.dbkj.meet.utils.VertifyCodeUtil;
 import com.dbkj.meet.validator.LoginValidator;
 import com.dbkj.meet.vo.UserLoginVo;
@@ -21,18 +19,11 @@ import com.jfinal.aop.Clear;
 import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.interceptor.POST;
-import com.jfinal.kit.StrKit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpSession;
 import java.io.File;
-import java.io.UnsupportedEncodingException;
-import java.security.Key;
-import java.security.PrivateKey;
-import java.util.Map;
-import java.util.UUID;
 
 /**
  * Created by MrQin on 2016/11/4.
@@ -40,7 +31,9 @@ import java.util.UUID;
 @Clear({LoginInterceptor.class, InfoInterceptor.class, AmountInterceptor.class})
 public class LoginController extends Controller {
 
-    private ILoginService loginService=enhance(LoginService.class);
+    private ILoginService loginService=new LoginService();
+
+    private RSAKeyService rsaKeyService;
 
     private final Logger logger= LoggerFactory.getLogger(LoginController.class);
 
@@ -59,17 +52,18 @@ public class LoginController extends Controller {
         UserLoginVo user=getBean(UserLoginVo.class,"user");
         boolean result=loginService.login(user,this);
         if(result){//登陆成功
-            //setSessionAttr(Constant.USER_KEY,user);
-
             int type = ((User)getSessionAttr(Constant.USER_KEY)).getAid();
-            if(type== UserType.SUPER_ADMIN.getTypeCode()||type==UserType.SUPER_SUPER_ADMIN.getTypeCode()){//超级管理员
+            if(type== UserType.SUPER_ADMIN.getTypeCode()||type== UserType.SUPER_SUPER_ADMIN.getTypeCode()){//超级管理员
                 redirect("/admin");
             }else{//
                 redirect("/meetlist");
             }
         }else{//登陆失败
-            Map<String,Key> keyMap=getSessionAttr(LoginService.KEY_MAP);
-            setAttr("publicKey",RSAUtil2.getPublicKey(keyMap));
+//            Map<String,Key> keyMap=getSessionAttr(LoginService.KEY_MAP);
+            String key=getPara("key");
+            setAttr("key",key);
+            rsaKeyService=new RSAKeyServiceImpl();
+            setAttr("publicKey",rsaKeyService.getPublicKey(key));
             render("index.html");
         }
     }
