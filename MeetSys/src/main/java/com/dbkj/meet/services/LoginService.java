@@ -105,7 +105,7 @@ public class LoginService implements ILoginService {
             controller.setCookie(LoginService.TIMES,times,60*30,true);
             controller.setAttr("times",times);
 
-            Res resCn= I18n.use();
+            Res resCn= I18n.use("zh_CN");
             user.setPassword(password);
             controller.setAttr("user",user);
             controller.setAttr("errorMsg",resCn.get("usernameOrPassword.not.correct"));
